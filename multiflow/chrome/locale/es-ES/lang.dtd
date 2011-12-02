@@ -1,0 +1,25 @@
+<!ENTITY file.label "Archivo">
+<!ENTITY open.label "Abrir">
+<!ENTITY new.label "Nueva">
+<!ENTITY browse.label "Browse">
+<!ENTITY convertXML.label "Convert to XML">
+<!ENTITY save.label "Guardar">
+<!ENTITY saveas.label "Guardar Como">
+<!ENTITY export.label "Export to TUX">
+<!ENTITY close.label "Cerrar">
+
+<!ENTITY edit.label "Editar">
+
+<!ENTITY insert.label "Inserta">
+
+<!ENTITY parastyle.label "Párrafo">
+
+<!ENTITY tools.label "Herramientas">
+
+<!ENTITY url.label "URL:">
+
+<!ENTITY print.label "Imprimir">
+
+<!ENTITY setting.label "Preferencias">
+
+<!ENTITY math.label "Matemáticas">

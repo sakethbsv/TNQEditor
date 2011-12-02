@@ -1,0 +1,25 @@
+<!ENTITY file.label "Bestand">
+<!ENTITY open.label "Openen">
+<!ENTITY new.label "Nieuw">
+<!ENTITY browse.label "Websurfen">
+<!ENTITY convertXML.label "XML Exporteren">
+<!ENTITY save.label "Opslaan">
+<!ENTITY saveas.label "Opslaan als">
+<!ENTITY export.label "Exporteren">
+<!ENTITY close.label "Sluiten">
+
+<!ENTITY edit.label "Bewerken">
+
+<!ENTITY insert.label "Invoegen">
+
+<!ENTITY parastyle.label "Parastijl">
+
+<!ENTITY tools.label "Extra">
+
+<!ENTITY url.label "URL:">
+
+<!ENTITY print.label "Afdrukken">
+
+<!ENTITY setting.label "Voorkeuren">
+
+<!ENTITY math.label "Wiskunde">

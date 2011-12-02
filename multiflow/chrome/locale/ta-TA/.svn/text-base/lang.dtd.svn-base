@@ -1,0 +1,25 @@
+<!ENTITY file.label "கோப்பு">
+<!ENTITY open.label "திற">
+<!ENTITY new.label "புதிய">
+<!ENTITY browse.label "உலாவு">
+<!ENTITY convertXML.label "XMLக்கு மாற்று">
+<!ENTITY save.label "சேமி">
+<!ENTITY saveas.label "அதாக சேமி">
+<!ENTITY export.label "ஏற்றுமதி">
+<!ENTITY close.label "மூடு">
+
+<!ENTITY edit.label "திருத்து">
+
+<!ENTITY insert.label "நுழை">
+
+<!ENTITY parastyle.label "பத்திவகை">
+
+<!ENTITY tools.label "மாற்று">
+
+<!ENTITY url.label "இணைமுகவரி">
+
+<!ENTITY print.label "பதிவு">
+
+<!ENTITY setting.label "அமைப்பு">
+
+<!ENTITY math.label "கணக்கு">

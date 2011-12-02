@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<link rel="stylesheet" id="webcss" type="text/css" href="chrome://multiflow/skin/document/tux-Black-on-Wheat.css" media="screen" />
+<link rel="stylesheet" id="printcss" type="text/css" href="chrome://multiflow/skin/document/tuxprint.css" media="print" />
+<script type="text/javascript" src="chrome://multiflow/content/html/mathml.js"></script>
+<title>Document MuLTiFlow 5</title>
+<meta name="author" content="Anonymous" />
+</head>
+<body onload="mathconvert();">
+<p class="ArticleTitle">Bienvenue à Multiflow</p>
+<p class="paragraph">Une navigateur/éditeur pour S&T documents qui peut ouvrir/éditer des fichiers Word ou HTML5 local ou naviguer sur le web.</p>
+<p>
+<embed src="chrome://multiflow/content/html/butterfly.svg" width="400" height="300"
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" /></p>
+<p class="big">
+<math class="big" displaystyle="true"><mi>x</mi><mo>=</mo><mroot><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mn>3</mn></mroot></math>
+</p>
+<p>Si vous trouvez que les mathématiques ci-dessus ne rendent pas correctement (surtout si la racine radicale ne s'étend pas jusqu'au fond de la fraction bâtie), alors s'il vous plaît téléchargez et installez les polices STIX de <a href="http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip">http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip</a> au dossier de polices de votre système d'exploitation (en cas de Microsoft Windows, il est sous le dossier WINDOWS/FONTS ou le dossier WINNT/FONTS) et redémarrez Multiflow afin de mieux rendre les mathématiques.</p>
+<p>Vous pouvez taper et modifier du code HTML+MathML+SVG, dans un environnement WYSIWYG. Pour charger un fichier HTML5 utilisez le bouton <b>Fichier->Ouvrir</b> en dessus. Style paragraphe/style caractère/MathML dans un fichier HTML 5 est affiché à droite du bouton <b>Parastyle</b> en dessus. Le balisage HTML5 du paragraphe cliqué peut être vu dans la fenêtre de code grise en dessous. Le paragraphe cliqué va acquérir un fond blanc indiquant qu'il est modifiable. CTRL+, CTRL- est utilisé pour zoomer et dézoomer le texte en surbrillance. Le bouton <b>Insérer</b> permet d'insérer une entree moderne TeX-like UTN28 pour générer format HTML+ MathML (il y a aussi une boîte séparée UTN28 en dessous pour créer MathML). Le balisage dans la boîte grise en dessous peut être réactualisé dans le paragraphe en appuyant sur le bouton "Changer TUXML".</p>
+<p>Pour naviguer sur le web, tapez votre URL dans la boîte à la droite de l'étiquette URL et appuyez sur ALT+b. Si vous cliquez sur le texte et appuyez sur CTRL+q, alors il vous ramènera à l'éditeur du navigateur. De l'éditeur de HTML5, si vous sélectionnez un morceau de texte et appuyez sur CTRL+g, puis il va rechercher pour ce mot en utilisant DuckDuckGo.com. Si vous appuyez sur CTRL+d puis il en recherche www.thefreedictionary.com. De la même, CTRL+r pour Google Scholar et CTRL+w pour Wikipedia. Vous pouvez aussi cliquer à droite et choisisser l'action au lieu d'utiliser les touches de raccourci. Cliquer sur le texte et appuyer sur CTRL+q (ou ESC?) vous ramènera vers le document que vous éditiez. Vous utilisez le menu «Windows» pour commuter entre l'éditeur/navigateur/bloc-notes. Le bloc-notes pour l'instant est utilisé pour déverser des données comme des citations de Google Scholar. Pour passer à d'autres scripts tels que Indic, Arabic etc. on peut utiliser le choix Google Translittération disponible dans le menu clic-droit. Pour insérer des caractères spéciaux utiliser le choix Unicode dans le menu clic-droit.</p>
+<p>SVG balisage est soutenu et éléments vectoriels peuvent être insérés et édité en utilisant le menu <b>Insérer->Vecteur</b>. Le balisage SVG peut être édité dans la zone grise et le bouton "Change TUXML" réactualisera les modifications faites. Le soutien de ChemML est en route...</p>
+<p>Entrée/sortie des formats DocX, ODF/ODT, ePub sont nativement soutenues. Pour convertir un document LaTeX/XeLateX à un document XHTML+MathML, s'il vous plaît utilisez un utilitaire de perl, LaTeXML, qui peut être téléchargé et installé de <a href="http://dlmf.nist.gov/LaTeXML/">http://dlmf.nist.gov/LaTeXML/</a>. Pour lire le texte PDF s'il vous plaît utilisez la commande Linux <code>pdftohtml</code> construite en utilisant la bibliothèque Poppler.</p>
+<p>Le paquet Debian inclut les polices STIX nécessaires et vous pouvez télécharger les derniers fichiers multiflow.deb de <a href="http://sourceforge.net/projects/multiflow/">http://sourceforge.net/projects/multiflow/</a>.</p>
+</body>
+</html>
+

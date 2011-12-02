@@ -1,0 +1,14 @@
+[Desktop Entry]
+Exec=multiflow
+Icon=multiflow
+Terminal=false
+Type=Application
+Categories=Application;Office;WordProcessor;GNOME;GTK;;
+StartupNotify=true
+Encoding=UTF-8
+X-Desktop-File-Install-Version=0.9
+MimeType=application/xhtml+xml;
+Name=MuLTiFlow
+GenericName=Word Processor
+Comment=Compose, edit, and view documents
+Name[en_IN]=MuLTiFlow

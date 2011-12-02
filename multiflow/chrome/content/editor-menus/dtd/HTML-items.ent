@@ -1,0 +1,14 @@
+<!ENTITY ol.sample "&lt;div>&lt;ol>&lt;li>&lt;p>First item &lt;/p>&lt;/li>&lt;li>&lt;p>Second item&lt;/p>&lt;/li>&lt;li>&lt;p>Third item&lt;/p>&lt;/li>&lt;/ol>&lt;/div>">
+
+<!ENTITY ul.sample "&lt;div>&lt;ul>&lt;li>&lt;p>First item &lt;/p>&lt;/li>&lt;li>&lt;p>Second item&lt;/p>&lt;/li>&lt;li>&lt;p>Third item&lt;/p>&lt;/li>&lt;/ul>&lt;/div>">
+
+<!ENTITY dl.sample "&lt;div>&lt;dl>&lt;dt>A&lt;/dt>&lt;dd>First item &lt;/dd>&lt;dt>B&lt;/dt>&lt;dd>Second item&lt;/dd>&lt;dt>C&lt;/dt>&lt;dd>Third item&lt;/dd>&lt;/dl>&lt;/div>">
+
+<!ENTITY table.sample "&lt;div>&lt;table>&lt;tr>&lt;th>First&lt;/th>&lt;th>Second&lt;/th>&lt;th>Third&lt;/th>&lt;/tr>&lt;tr>&lt;td>1.0&lt;/td>&lt;td>2.0&lt;/td>&lt;td>3.0&lt;/td>&lt;/tr>&lt;tr>&lt;td>10&lt;/td>&lt;td>20&lt;/td>&lt;td>30&lt;/td>&lt;/tr>&lt;/table>&lt;/div>">
+
+
+
+
+
+
+

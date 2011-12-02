@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+<!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+<!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+<!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+%HTMLItems;
+%MathItems;
+%SVGItems;
+]>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:tux="http://www.tnq.co.in/TUX-rdf#">
+  <menu id="parastyle-menus" label="&parastyle.label;" accesskey="p">
+    <menupopup id="para-menu-popup">
+      <textbox label="parastyle"  id="parastyle" size="25" />
+      <menu id="head-menu"  label="Head"  datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#head" object="?head" />
+	      <member container="?head" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#key" object="?key" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#role" object="?role" />
+	    </conditions>
+	    <action>
+	      <menupopup id="head-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);" accesskey="?key" title="?role"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="sections-menu" label="Sections" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#sections" object="?sections" />
+	      <member container="?sections" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="sections-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="body-menu" label="Body" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#body" object="?body" />
+	      <member container="?body" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup>
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="list-menu" label="List" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#list" object="?list" />
+	      <member container="?list" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="list-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="box-menu" label="Box" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#box" object="?box" />
+	      <member container="?box" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="box-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="tail-menu" label="Tail" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#tail" object="?tail" />
+	      <member container="?tail" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="tail-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="floats-menu" label="Floats" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#floats" object="?floats" />
+	      <member container="?floats" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="floats-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="glossary-menu" label="Glossary" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#glossary" object="?glossary" />
+	      <member container="?glossary" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="glossary-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+      <menu id="index-menu" label="Index" datasources="editor-menus/dtd/para-styles.rdf" ref="urn:root">
+	<template>
+	  <rule>
+	    <conditions>
+	      <content uri="?uri" />
+	      <triple subject="?uri" predicate="http://www.tnq.co.in/TUX-rdf#index" object="?index" />
+	      <member container="?index" child="?child" />
+	      <triple subject="?child" predicate="http://home.netscape.com/NC-rdf#name" object="?name" />
+	    </conditions>
+	    <action>
+	      <menupopup id="index-parastyle-menu-popup">
+		<menuitem uri="?child" label="?name" value="?name" oncommand="m$.addClassToSel(this);"/>
+	      </menupopup>
+	    </action>
+	  </rule>
+	</template>
+      </menu>
+    </menupopup>
+  </menu>
+</overlay>

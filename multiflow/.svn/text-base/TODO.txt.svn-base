@@ -1,0 +1,21 @@
+Further goals of the project
+-------------------------------------------------------------
+
+(i) A simple implementation of ChemML using SVG
+
+(ii) Semanic markup capabilties using a system of ID-based micro-format that can display as graphs
+
+
+Known Bugs
+----------
+
+(i) URL escaping and URL->File-path conversions needs professional attention
+
+(ii) UTN28 to MathML conversion code is still raw, so expect problems 
+
+(iii) Detecting file type uses file extensions..blistering barnacles..
+
+(iv) File encoding needs to be detected automatically.
+
+(v) HTML code normalization is quite raw
+

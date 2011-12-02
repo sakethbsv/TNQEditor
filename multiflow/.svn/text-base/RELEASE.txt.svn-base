@@ -1,0 +1,53 @@
+We have two release files:
+
+1) multiflow.deb
+2) multiflow.xpi
+
+both are zip files.
+
+You can also use the XPI to create a standalone:
+
+a) unzip multiflow.xpi to "multiflow" folder
+b) uncomment the line
+/*pref("toolkit.defaultChromeURI", "chrome://multiflow/content/editor.xul");*/
+i.e.. make it
+pref("toolkit.defaultChromeURI", "chrome://multiflow/content/editor.xul");
+
+c) install xulrunner
+d) now you can run multiflow as:
+   xulrunner multiflow/application.ini
+e) "xulrunner" can also be replaced by "firefox -app" if you have Firefox 3.0+
+f) you can also put this in a shell file and create a soft link, in fact if you unzip multiflow.deb file you can recover the /usr/bin/multiflow shell file
+g) Abiword and LaTeXML are required to do convertions from Word and LaTeX documents, respectively.
+
+(you can add -jsconsole option [this will fire-up a error console] if you like to debug)
+
+------------------------------
+Debug mode
+------------------------------
+In the "defaults/preferences/prefs.js" file
+debug mode has been switched on to flag in Error Console.
+This might affect performance, so can be switched-off for normal users.
+
+
+-----------------------------
+Known Bugs for Firefox addon:
+------------------------------
+
+It has not been easy to switch language,
+however, in Firefox
+
+using the url: "about:config"
+intl.locale.matchOS to "false"
+general.useragent.locale to "*"
+where "*" could be "ta-TA" if you are Tamil,
+and "*" could be "de-DE" if you are German (Deutsh).
+
+seems to work.
+
+-----------------------------
+Known issues in Debian (Lenny)
+-----------------------------
+In Debian-Lenny-IceWeasel the Addon seems to work but switching language has not been easy in  Debian, either in the addon or the standalone.
+
+

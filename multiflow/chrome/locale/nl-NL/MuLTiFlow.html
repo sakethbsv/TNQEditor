@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<link rel="stylesheet" id="webcss" type="text/css" href="chrome://multiflow/skin/document/tux-Black-on-Wheat.css" media="screen" />
+<link rel="stylesheet" id="printcss" type="text/css" href="chrome://multiflow/skin/document/tuxprint.css" media="print" />
+<script type="text/javascript" src="chrome://multiflow/content/html/mathml.js"></script>
+<title>MuLTiFlow 5 document</title>
+<meta name="author" content="Anonymus" />
+</head>
+<body onload="mathconvert();">
+<p class="ArticleTitle">Welcome bij MuLTiFlow</p>
+<p class="paragraph">Een Browser/Editor voor S&T documenten die lokale Word of HTML5 bestanden kan openen/bewerken of kan surfen op het web.</p>
+<p class="paragraph">
+<embed src="chrome://multiflow/content/html/butterfly.svg" width="400" height="300"
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" /></p>
+<p class="big">
+<math displaystyle="true"><mi>x</mi><mo>=</mo><mroot><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mn>3</mn></mroot></math>
+</p>
+<p>Als u ziet dat bovenstaande wiskundige formule niet goed weergegeven wordt (vooral als het wortelteken niet doorloopt tot de onderkant van de opgebouwde breuk) dan kunt u de STIX fonts downloaden van <a href="http://www.mozilla.org/projecten/mathml/fonts/stix/font STIXBeta.zip">http://www.mozilla.org/projecten/mathml/fonts/stix/font STIXBeta.zip</a> en installeren in de fonts folder van uw besturingssysteem (in het geval van Microsoft Windows is dat de folder WINDOWS/FONTS of de folder WINNT/FONTS) en MuLTiFlow herstarten om wiskunde formules better weer te geven.</p>
+<p>U kunt HTML+MathML+SVG typen en bewerken, in een WYSIWYG omgeving. Gebruik de <b>File->Open</b> knop bovenaan om een HTML5 bestand te laden. Alineastijl/Tekenstijl/MathML in een HTML5 bestand wordt weergegeven rechts van de <b>ParaStyle</b> knop bovenaan. De HTML5 markup van de aangeklikte alinea is te zien in het grijze codevenster onderaan. De aangeklikte alinea krijgt een witte achtergrond die aangeeft dat hij bewerkt kan worden. CTRL+, CTRL- wordt gebruikt om de gemarkeerde tekst in en uit te zoomen. De <b>Insert</b> toets wordt gebruikt om een moderne TeX-achtige UTN28 invoer in te voegen in HTML+MathML formaat (er is ook een apart UTN28 vak onderaan voor het creëren van MathML). De opmaak in het grijze vak onderaan kan worden bijgewerkt naar de alinea met de knop "Change TUXML".</p>
+<p>Om te browsen, typt u uw URL in het vak rechts van het URL label en toetst ALT+b. Als u klikt op de tekst en CTRL+q toetst gaat u terug van de browser naar de editor. Als u in de HTML5 editor een stuk tekst selecteert en CTRL+g toetst dan wordt op DuckDuckGo.com naar die tekst gezocht. Als u Ctrl+d toetst wordt op www.thefreedictionary.com gezocht. Idem CTRL+r voor Google Scholar en CTRL+w voor Wikipedia. In plaats van de sneltoetsen te gebruiken, kunt u ook met de rechter muisknop klikken en de gewenste actie kiezen. Klikken op de tekst en CTRL+q (of ESC?) toetsen brengt u terug naar het document dat u aan het bewerken was. U gebruikt het "Windows" menu om te schakelen tussen Editor/Browser/Kladblok. Het kladblok wordt voorlopig gebruikt om gegevens zoals citaties uit Google Scholar te dumpen. Voor het schakelen naar andere scripts zoals Indisch, Arabisch enz. kunt u gebruik maken van de Google Transliteratie optie die beschikbaar is in de menus onder de rechter muisknop. Om speciale tekens in te voegen gebruikt u de Unicode optie onder de rechter muisknop.</p>
+<p>SVG markup wordt ondersteund en vector elementen kunnen worden ingevoegd en bewerkt via het menu <b>Invoegen->Vector</b>. De SVG markup kan worden bewerkt in het grijze vak en de "Change TUXML" knop zal de aangebrachte wijzigingen bijwerken. ChemML ondersteuning is op komst...</p>
+<p>De invoer/uitvoer formaten DocX, ODF/ODT, ePub worden standaard ondersteund. Om een LaTeX/XeLaTeX document te converteren naar een XHTML+MathML document, kunt u gebruik maken van een hulpprogramma in Perl, LaTeXML, dat kan worden gedownload en geïnstalleerd van <a href="http://dlmf.nist.gov/LaTeXML/">http://dlmf.nist.gov/LaTeXML/</a>. Voor het lezen van tekst in een PDF bestand, gebruikt u het Linux commando <code>pdftohtml</code> dat gebaseerd is op de Poppler bibliotheek.</p>
+<p>Het debian pakket bevat de vereiste STIX fonts. U kunt de nieuwste multiflow.deb bestanden downloaden van <a href="http://sourceforge.net/projects/multiflow/">http://sourceforge.net/projects/multiflow/</a>.</p>
+ 
+</body>
+</html>
+

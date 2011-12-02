@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<link rel="stylesheet" id="webcss" type="text/css" href="chrome://multiflow/skin/document/tux-Black-on-Wheat.css" media="screen" />
+<link rel="stylesheet" id="printcss" type="text/css" href="chrome://multiflow/skin/document/tuxprint.css" media="print" />
+<script type="text/javascript" src="chrome://multiflow/content/html/mathml.js"></script>
+<title>MuLTiFlow 5 document</title>
+<meta name="author" content="Anonymous" />
+</head>
+<body onload="mathconvert();">
+<h1>Welcome to MuLTiFlow</h1>
+<p>A Browser/Editor for S&T documents that can open/edit Word or HTML5 local files or browse the web.</p>
+<p class="big">
+<embed src="chrome://multiflow/content/html/butterfly.svg" width="400" height="300"
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+<math class="big" displaystyle="true"><mi>x</mi><mo>=</mo><mroot><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mn>3</mn></mroot></math>
+
+</p>
+<p>If you find that the above Math doesn't render properly (especially if the root radical doesn't extend to the bottom of the built-up-fraction) then please download and install the STIX fonts from <a href="http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip">http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip</a> to your operating system's font folder (in case of Microsoft Windows it is either WINDOWS/FONTS folder or WINNT/FONTS folder) and restart MuLTiFlow in order to render math better.</p>
+<p>You can type and edit HTML+MathML+SVG, in a WYSIWYG environment. To load a HTML5 file use <b>File->Open</b> button above. Paragraph style/Character style/MathML in a HTML5 file is displayed to the right of <b>ParaStyle</b> button above. The HTML5 markup of the clicked paragraph can be seen in the grey code window below.  The clicked paragraph will acquire a white background indicating that it is editable. CTRL+, CTRL- is used zoom-in and zoom-out highlighted text. <b>Insert</b> button is used to insert a modern TeX-like UTN28 input to generate HTML+MathML format (there is also a separate UTN28 box below for creating MathML). The markup in the grey-box below can be updated to the paragraph by pressing "Change TUXML" button.</p>
+<p>To Browse, type your URL in the box to the right of the URL label and press ALT+b. If you click on the text and press CTRL+q then it will take you back to the editor from the browser. From the HTML5 editor if you select a piece of text and press CTRL+g then it will search using DuckDuckGo.com for that word. If you press CTRL+d then it lookup the www.thefreedictionary.com for it. Similarly CTRL+r for Google Scholar and CTRL+w is for Wikipedia. You can also Right-Click and choose the action instead of using the short-cut keys. Clicking on the text and pressing CTRL+q (or ESC?) will take you back to the document you were editing. A new "Windows" menu for switching Editor/Browser/Scratch. The Scratch pad for now is being used to dump data like citations from Google Scholar. For switching to other scripts such as Indic, Arbaic etc. one can use Google Transliteration widget available in the Right-Click menus. To insert special characters use the Unicode menu in the Right-Click popup.</p>
+<p>SVG markup is supported and vector elements can be inserted and edited using the menu <b>Insert->Vector</b>. The SVG markup can be edited in the grey box and the "Change TUXML" button will update the changes made. ChemML support is on the way...</p>
+<p>Input/output formats DocX, ODF/ODT, ePub are natively supported. To convert LaTeX/XeLaTeX document to XHTML+MathML document, please use a perl utility, LaTeXML, which can be downloaded and installed from <a href="http://dlmf.nist.gov/LaTeXML/">http://dlmf.nist.gov/LaTeXML/</a>. To read Text-PDF please use Linux command <code>pdftohtml</code> built using Poppler library.</p>
+<p>The debian package includes the required STIX fonts and you can download the latest multiflow.deb files from <a href="http://sourceforge.net/projects/multiflow/">http://sourceforge.net/projects/multiflow/</a></p>
+ 
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!ENTITY file.label "ফাইল">
+<!ENTITY open.label "খুলুন">
+<!ENTITY new.label "নতুন">
+<!ENTITY browse.label "ওয়েব ব্রাউজ করুন">
+<!ENTITY convertXML.label "XML এক্সপোর্ট">
+<!ENTITY save.label "সংরক্ষণ">
+<!ENTITY saveas.label "নতুন ভাবে সংরক্ষণ">
+<!ENTITY export.label "এক্সপোর্ট">
+<!ENTITY close.label "বন্ধ করুন">
+
+<!ENTITY edit.label "সম্পাদনা">
+
+<!ENTITY insert.label "করা লেখা">
+
+<!ENTITY parastyle.label "অনুচ্ছেদ">
+
+<!ENTITY tools.label "সরঞ্জাম">
+
+<!ENTITY url.label "URL:">
+
+<!ENTITY print.label "মুদ্রণ করুন">
+
+<!ENTITY setting.label "পছন্দসমূহ">
+
+<!ENTITY math.label "গনিত">

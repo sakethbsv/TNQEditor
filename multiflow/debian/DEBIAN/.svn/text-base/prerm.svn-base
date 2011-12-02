@@ -1,0 +1,5 @@
+#!/bin/sh
+rm /usr/bin/multiflow
+rm /usr/share/pixmaps/multiflow.png
+rm /usr/share/applications/multiflow.desktop
+rm -rf /usr/lib/multiflow/

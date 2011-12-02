@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/license.txt
+END
+sample.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/sample.html
+END
+POSTagger.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/POSTagger.js
+END
+lexer.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/lexer.js
+END
+test.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/test.js
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/README.txt
+END
+lexicon.js_
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/multiflow/!svn/ver/191/trunk/chrome/content/js/lib/jspos/lexicon.js_
+END

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd">
+<!--
+    This file is part of MuLTiFlow.
+
+    MuLTiFlow is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    MuLTiFlow is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns="http://www.w3.org/1999/xhtml"
+	    xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	    xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <vbox id="code-window">
+    <hbox>
+      <vbox>
+	<textarea id="parahtml" multiline="true" cols="45" rows="5" style="overflow: -moz-scrollbars-vertical;"></textarea>
+      </vbox>
+      <vbox>
+	<groupbox>
+	  <caption label="ChangeTUXML" />
+	  <vbox>
+	    <input type="button" label="TUXML" value="Change TUXML" onclick="askAndChangeParaTUX()" />
+	  </vbox>
+	</groupbox>
+	<groupbox>
+	  <caption label="UTN28Math" />
+	  <vbox>
+	    <hbox>
+	      <input size="20" label="Insert" id="insertUTN28" type="text" class="insert"/>
+	    </hbox>
+	  </vbox>
+	  <vbox>
+	    <hbox>
+	      <input label="InsertButton" value="Insert" id="InsertUTN28Button" type="button" class="insert" onclick="insertTextInCodeArea();"/>
+	    </hbox>
+	  </vbox>
+	</groupbox>
+      </vbox>
+    </hbox>
+  </vbox>
+</overlay>

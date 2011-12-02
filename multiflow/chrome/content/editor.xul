@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/editor-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/codewindow.xul"?>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://global/skin/findBar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://multiflow/skin/editor.css" type="text/css"?>
+<?xml-stylesheet href="chrome://multiflow/locale/main.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://multiflow/locale/lang.dtd">
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<window title="MuLTiFlow" id="multiflow"
+	    xmlns:html="http://www.w3.org/1999/xhtml"
+	    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+	    orient="vertical"
+	    onload="centerWindowOnScreen();m$.Init();"
+	    allowevents="true"
+	    width="500"
+	    height="700"
+	    flex="1"
+	    style="overflow:auto;"
+	    >
+  <script type="application/x-javascript" src="chrome://global/content/dialogOverlay.js" />
+  <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/> 
+  <script type="application/x-javascript" src="chrome://global/content/findBar.js"/>
+
+  <script type="application/x-javascript" src="chrome://global/content/inlineSpellCheckUI.js"/> 
+  <script type="application/x-javascript" src="chrome://global/content/strres.js"/>
+  <script type="application/x-javascript" src="chrome://global/content/inlineSpellCheckUI.js"/>
+  <script type="application/x-javascript" src="chrome://global/content/printUtils.js"/> 
+
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/io.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery-1.4.2.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery.column.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery.text-align.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/xregexp.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/xregexp-unicode.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/htmlparser.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jsPrintSetup.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jspos/POSTagger.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jspos/lexer.js" />
+<script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jspos/lexicon.js_" />
+
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/editor.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/shell.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/wordfreq.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/owl.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/spellchecker.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/uplift.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/entities.js" />
+
+
+  <keyset id="edit_keys">
+    <key id="edit_undo_key" oncommand="m$.makeEdit('undo');" modifiers="accel control" key="z" />
+    <key id="edit_redo_key" oncommand="m$.makeEdit('redo');" modifiers="accel control" key="y" />
+    <key id="edit_save_key" oncommand="m$.saveCurrentFile();" modifiers="accel control" key="s" />
+    <key id="edit_saveas_key" oncommand="m$.saveAsCurrentFile();" modifiers="alt meta" key="s" />
+    <key id="edit_bold_key" oncommand="m$.makeEdit('bold');" modifiers="accel control" key="b" />
+    <key id="edit_italic_key" oncommand="m$.makeEdit('italic');" modifiers="accel control" key="i" />
+    <key id="edit_superscript_key" oncommand="m$.makeEdit('superscript');" modifiers="accel control" key="^" />
+    <key id="edit_subscript_key" oncommand="m$.makeEdit('subscript');" modifiers="accel control" key="_" />
+    <key id="find_key" oncommand="m$.showFindDialog();" modifiers="accel control" key="f" />
+    <key id="print" oncommand="m$.printDoc();" modifiers="accel control" key="p" />
+    <key id="bigger_font" oncommand="m$.biggerFontSize();" modifiers="accel control" key="+" />
+    <key id="bigger_font2" oncommand="m$.biggerFontSize();" modifiers="accel control" key="=" />
+    <key id="smaller_font" oncommand="m$.smallerFontSize();" modifiers="accel control" key="-" />
+    <key id="reformat_math" oncommand="m$.reformatMath();" modifiers="accel control" key="m" />
+    <key id="browse_back" oncommand="m$.browseBack();" modifiers="accel ctrl" keycode="VK_LEFT" />
+    <key id="browse_forward" oncommand="m$.browseForward();" modifiers="accel ctrl" keycode="VK_RIGHT" />
+    <key id="browse_url" oncommand="m$.browseAddress();" modifiers="alt" key="b" />
+    <key id="replace_utn28" oncommand="m$.replaceText();" modifiers="accel ctrl" keycode="VK_RETURN" />
+    <key id="typos" oncommand="m$.createStrangeWordsList();" modifiers="accel ctrl" key="n" />
+    <key id="dic" oncommand="m$.surf4Selection('dic');" modifiers="accel ctrl" key="d" />
+    <key id="duck" oncommand="m$.surf4Selection('duck');" modifiers="accel ctrl" key="g" />
+    <key id="wiki" oncommand="m$.surf4Selection('wiki');" modifiers="accel ctrl" key="w" />
+    <key id="scholar" oncommand="m$.surf4Selection('scholar');" modifiers="accel ctrl" key="r" />
+
+    <key id="close_file" oncommand="m$.closeFile();" modifiers="accel ctrl" key="q"/>
+    <key id="close_file2" oncommand="m$.closeFile();" keycode="VK_ESCAPE"/>
+    <key id="replace_utn28text" oncommand="m$.replaceText();" modifiers="alt meta" key="r"/>
+    <key id="change_para_tux" oncommand="m$.changeParaTUX();" modifiers="alt meta" key="u"/>
+    <key id="go_to_link" oncommand="m$.goToLink();" modifiers="accel ctrl" key="l"/>
+  </keyset>
+
+  <stringbundle id="bundle_findBar" src="chrome://global/locale/findbar.properties"/>
+ <!--Inserts Code from editor-menus/editor-menus.xul file here-->
+  <hbox id="editor-hbox" label="Editor Menubar">
+    <menubar id="editor-menubar" class="chromeclass-menubar" />
+    <!--menubar id="multiflow-menubar" class="chromeclass-menubar" /-->
+  </hbox>
+  <browser  type="content"  id="browser-iframe" src="chrome://multiflow/locale/MuLTiFlow.html" homepage="chrome://multiflow/locale/MuLTiFlow.html" showcaret="true" scrollwidth="10px" style="overflow:scroll;" flex="1"/>
+  <editor  editorType="html" type="content-primary"  id="editor-iframe" src="chrome://multiflow/locale/MuLTiFlow.html" scrollwidth="10px" style="overflow:scroll;" flex="1" context="browse-menu"/>
+  <editor  editorType="html" type="content-secondary"  id="scratch-iframe" src="chrome://multiflow/locale/MuLTiFlow.html" scrollwidth="10px" style="overflow:scroll;" flex="1" context="browse-menu"/>
+  <!--Inserts Code from codewindow.xul file here-->
+  <vbox id="code-window" label="Code Window" />
+  <statusbar>
+    <hbox>
+      <html:span> URL: </html:span>
+      <textbox id="browser-urlbox" size="15"/>
+    </hbox>
+    <toolbarseparator/>
+    <hbox>
+      <textbox size="20" label="Insert" id="markup-fragment" type="text" class="insert"/>
+      <button label="&insert.label;" oncommand="m$.insertText();" accesskey="i"/>
+    </hbox>
+  </statusbar>
+  <popupset>
+    <menupopup id="browse-menu" label="Search">
+      <menuitem label="The Free Dictionary" oncommand="m$.surf4Selection('dic');"/>
+      <menuitem label="Wikipedia" oncommand="m$.surf4Selection('wiki');"/>
+      <menuitem label="DuckDuckGo" oncommand="m$.surf4Selection('duck');"/>
+      <menuitem label="Google Scholar" oncommand="m$.surf4Selection('scholar');"/>
+      <menuitem label="Google Code" oncommand="m$.surf4Selection('code');"/>
+      <menuitem label="Google" oncommand="m$.surf4Selection('google');"/>
+      <menuitem label="Yahoo" oncommand="m$.surf4Selection('yahoo');"/>
+      <menuitem label="Bing" oncommand="m$.surf4Selection('bing');"/>
+      <menuitem label="Google Transliteration"  oncommand="m$.surf4Selection('indic');"/>
+      <menuitem label="Unicode"  oncommand="m$.surf4Selection('unicode');"/>
+      <menuitem label="&setting.label;"  oncommand="m$.showPrefs();"/>
+    </menupopup>
+  </popupset>
+</window>

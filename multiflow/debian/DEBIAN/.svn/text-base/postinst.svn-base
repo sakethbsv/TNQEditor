@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ -f /usr/bin/firefox ]; then
+    echo "using firefox as xulrunner..."
+elif [ -f /usr/bin/iceweasel ]; then
+    echo "creating soft link for iceweasel as firefox..."
+    ln -s /usr/bin/iceweasel /usr/bin/firefox
+elif [ -f /usr/bin/xulrunner ]; then
+    echo "creating soft link for xulrunner as firefox..."
+    ln -s /usr/bin/xulrunner /usr/bin/firefox
+fi

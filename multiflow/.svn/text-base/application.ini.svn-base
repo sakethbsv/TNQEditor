@@ -1,0 +1,11 @@
+[App]
+Vendor=TNQ
+Name=multiflow
+Version=1.085
+BuildID=20100730
+Copyright=Copyright (c) 2010 S.K.Venkatesan, B. Manoponni, and G.K.Venkatesan, TNQ Books and Journals, Chennai
+ID={multiflow@tnq.co.in}
+
+[Gecko]
+MinVersion=1.7
+MaxVersion=9.0a1

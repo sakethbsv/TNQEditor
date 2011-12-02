@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/editor-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/codewindow4mobile.xul"?>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://global/skin/findBar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://multiflow/locale/main.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://multiflow/locale/lang.dtd">
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<window title="MuLTiFlow" id="multiflow"
+	    xmlns="http://www.w3.org/1999/xhtml"
+	    xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+	    orient="vertical"
+	    onload="centerWindowOnScreen();Init();"
+	    allowevents="true"
+	    width="500"
+	    height="300"
+	    flex="1"
+	    style="overflow:auto;"
+	    >
+
+  <script type="application/x-javascript" src="chrome://global/content/dialogOverlay.js" />
+  <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/> 
+  <script type="application/x-javascript" src="chrome://global/content/findBar.js"/>
+
+  <script type="application/x-javascript" src="chrome://global/content/inlineSpellCheckUI.js"/> 
+  <script type="application/x-javascript" src="chrome://global/content/strres.js"/>
+  <script type="application/x-javascript" src="chrome://global/content/inlineSpellCheckUI.js"/>
+  
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/io.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery-1.4.2.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery.column.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery.text-align.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/xregexp.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/xregexp-unicode.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/htmlparser.js" />
+
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/editor.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/wordfreq.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/spellchecker.js" />
+
+
+  <keyset id="edit_keys">
+    <key id="edit_undo_key" oncommand="makeEdit('undo');" modifiers="accel control" key="z" />
+    <key id="edit_redo_key" oncommand="makeEdit('redo');" modifiers="accel control" key="y" />
+    <key id="edit_save_key" oncommand="saveCurrentFile();" modifiers="accel control" key="s" />
+    <key id="edit_saveas_key" oncommand="saveAsCurrentFile();" modifiers="alt meta" key="s" />
+    <key id="edit_bold_key" oncommand="makeEdit('bold');" modifiers="accel control" key="b" />
+    <key id="edit_italic_key" oncommand="makeEdit('italic');" modifiers="accel control" key="i" />
+    <key id="edit_superscript_key" oncommand="makeEdit('superscript');" modifiers="accel control" key="^" />
+    <key id="edit_subscript_key" oncommand="makeEdit('subscript');" modifiers="accel control" key="_" />
+    <key id="find_key" oncommand="showFindDialog();" modifiers="accel control" key="f" />
+    <key id="print" oncommand="printDoc();" modifiers="accel control" key="p" />
+    <key id="bigger_font" oncommand="biggerFontSize();" modifiers="accel control" key="+" />
+    <key id="bigger_font2" oncommand="biggerFontSize();" modifiers="accel control" key="=" />
+    <key id="smaller_font" oncommand="smallerFontSize();" modifiers="accel control" key="-" />
+    <key id="reformat_math" oncommand="reformatMath();" modifiers="accel control" key="m" />
+    <key id="browse_back" oncommand="browseBack();" modifiers="accel ctrl" keycode="VK_LEFT" />
+    <key id="browse_forward" oncommand="browseForward();" modifiers="accel ctrl" keycode="VK_RIGHT" />
+    <key id="browse_url" oncommand="browseAddress();" modifiers="alt" key="b" />
+    <key id="replace_utn28" oncommand="replaceText();" modifiers="accel ctrl" keycode="VK_RETURN" />
+    <key id="typos" oncommand="createStrangeWordsList();" modifiers="accel ctrl" key="n" />
+    <key id="dic" oncommand="getDictionaryForSelection();" modifiers="accel ctrl" key="d" />
+    <key id="google" oncommand="getGoogleForSelection();" modifiers="accel ctrl" key="g" />
+    <key id="wiki" oncommand="getWikipediaForSelection();" modifiers="accel ctrl" key="w" />
+    <key id="scholar" oncommand="getGoogleScholarForSelection();" modifiers="accel ctrl" key="r" />
+
+    <key id="close_file" oncommand="closeFile();" modifiers="accel ctrl" key="q"/>
+    <key id="close_file2" oncommand="closeFile();" keycode="VK_ESCAPE"/>
+    <key id="replace_utn28text" oncommand="replaceText();" modifiers="alt meta" key="r"/>
+    <key id="change_para_tux" oncommand="changeParaTUX();" modifiers="alt meta" key="u"/>
+    <key id="go_to_link" oncommand="goToLink();" modifiers="accel ctrl" key="l"/>
+  </keyset>
+
+  <stringbundle id="bundle_findBar" src="chrome://global/locale/findbar.properties"/>
+
+  <hbox id="editor-hbox" label="Editor Menubar">
+    <menubar id="editor-menubar" class="chromeclass-menubar" />
+    <menubar id="multiflow-menubar" class="chromeclass-menubar" />
+  </hbox>
+  <browser  type="content"  id="browser-iframe" src="chrome://multiflow/locale/MuLTiFlow.html" homepage="chrome://multiflow/locale/MuLTiFlow.html" showcaret="true" scrollwidth="10px" style="overflow:scroll;" flex="1"/>
+  <!--findbar id="FindingToolbar" browserid="browser-iframe" flex="1"/>
+      <findbar id="FindingToolbar" browserid="editor-iframe" flex="1"/-->
+  <editor  editorType="html" type="content-primary"  id="editor-iframe" src="chrome://multiflow/locale/MuLTiFlow.html" scrollwidth="10px" style="overflow:scroll;" flex="1"/>
+  <!--Inserts Code from codewindow.xul file here-->
+  <vbox id="code-window" label="Code Window" />
+</window>

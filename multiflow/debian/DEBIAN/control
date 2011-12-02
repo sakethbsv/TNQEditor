@@ -1,0 +1,11 @@
+Package: multiflow
+Version: 1.071
+Architecture: all
+Maintainer: S.K.Venkatesan, B. Manoponni, G.K.Venkatesan, <skvenkat@tnq.co.in>, <suki.venkat@gmail.com>
+Provides: multiflow
+Section: editors
+Homepage: http://sourceforge.net/projects/multiflow/
+Description: Simple HTML5+XML editor 
+
+
+

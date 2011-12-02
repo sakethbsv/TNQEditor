@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/file-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/edit-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/insert-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/parastyle-menus.xul"?>
+<?xul-overlay href="chrome://multiflow/content/editor-menus/window-menus.xul"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+	  <!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+	  <!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+	  <!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+	  %HTMLItems;
+	  %MathItems;
+	  %SVGItems;
+	  ]>
+<!--
+   This file is part of MuLTiFlow.
+
+   MuLTiFlow is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   MuLTiFlow is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <menubar id="editor-menubar" flex="1"> 
+    <!--Inserts Code from file-menus.xul file here-->
+    <menu id="file-menus"/>
+    <toolbarseparator/>
+    <!--Inserts Code from edit-menus.xul file here-->
+    <menu id="edit-menus"/>
+    <toolbarseparator/>
+    <!--Inserts Code from insert-menus.xul file here-->
+    <menu id="insert-menus"/>
+    <toolbarseparator/>
+    <!--Inserts Code from parastyle-menus.xul file here-->
+    <menu id="parastyle-menus"/>
+    <toolbarseparator/>
+    <menu id="window-menus"/>
+  </menubar>
+</overlay>

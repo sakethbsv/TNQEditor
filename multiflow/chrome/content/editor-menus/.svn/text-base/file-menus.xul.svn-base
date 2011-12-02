@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+	  <!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+	  <!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+	  <!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+	  %HTMLItems;
+	  %MathItems;
+	  %SVGItems;
+]>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <menu id="file-menus" label="&file.label;" accesskey="f">
+    <menupopup id="file-menu-popup">
+      <menuitem label="&open.label;"  oncommand="m$.openFile();" accesskey="o"/>
+      <menuitem label="&new.label;"  oncommand="m$.openBlankFile();" accesskey="n"/>
+      <menuitem label="&browse.label;"  oncommand="m$.browseAddress();" accesskey="b"/>
+      <menuitem label="&save.label;"  oncommand="m$.saveCurrentFile()" accesskey="s"/>
+      <menu label="&saveas.label;" accesskey="a">
+	<menupopup id="saveasMenu_popup">
+	  <menuitem label="SaveAsHTML"  oncommand="m$.saveAsCurrentFile()" accesskey="a"/>
+	  <menuitem label="&export.label;"  oncommand="m$.saveAsTUXFile()" accesskey="t"/>
+	  <menuitem label="Export to XHTML"  oncommand="m$.saveAsXHTMLFile()" accesskey="x"/>
+	  <menuitem label="Export to DocX"  oncommand="m$.saveAsPackage('docx')" accesskey="d"/>
+	  <menuitem label="Export to ODT"  oncommand="m$.saveAsPackage('odt')" accesskey="o"/>
+	  <menuitem label="Export to ePub"  oncommand="m$.saveAsPackage('epub')" accesskey="o"/>
+	</menupopup>
+      </menu>
+      <menuitem label="&close.label;"   oncommand="m$.closeFile()" accesskey="c"/>
+      <menuitem id="previewPrint" label="Preview Print"  oncommand="m$.printPreview();" accesskey="v"/>
+      <menuitem id="print" label="&print.label;"  oncommand="m$.printDoc();" accesskey="p"/>  
+      <menuitem  id="pref" label="&setting.label;"  oncommand="m$.showPrefs();" accesskey="t"/>
+    </menupopup>
+  </menu>
+</overlay>

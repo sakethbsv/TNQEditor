@@ -1,0 +1,26 @@
+<!ENTITY file.label "Файл">
+<!ENTITY open.label "Открыть">
+<!ENTITY new.label "Создать">
+<!ENTITY browse.label "Веб-браузер">
+<!ENTITY convertXML.label "Convert to XML">
+<!ENTITY save.label "Сохранить">
+<!ENTITY saveas.label "Сохранить как">
+<!ENTITY export.label "Экспорт">
+<!ENTITY close.label "Закрыть">
+
+<!ENTITY edit.label "Правка">
+
+<!ENTITY insert.label "Вставлять">
+
+<!ENTITY parastyle.label "Абзац">
+
+<!ENTITY tools.label "Сервис">
+
+<!ENTITY url.label "URL:">
+
+<!ENTITY print.label "Печать">
+
+<!ENTITY setting.label "Параметры">
+
+<!ENTITY math.label "Математика">
+

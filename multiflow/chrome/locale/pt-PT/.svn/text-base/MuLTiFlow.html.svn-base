@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<link rel="stylesheet" id="webcss" type="text/css" href="chrome://multiflow/skin/document/tux-Black-on-Wheat.css" media="screen" />
+<link rel="stylesheet" id="printcss" type="text/css" href="chrome://multiflow/skin/document/tuxprint.css" media="print" />
+<script type="text/javascript" src="chrome://multiflow/content/html/mathml.js"></script>
+<title>MuLTiFlow 5 document</title>
+<meta name="author" content="Anonymous" />
+</head>
+<body onload="mathconvert();">
+<h1>Bem-vindo ao Multiflow</h1>
+<p>A. Browser / Editor de S & T documentos que pode abrir / editar arquivos Word ou HTML5 local ou navegar na web.</p>
+<p class="big">
+<embed src="chrome://multiflow/content/html/butterfly.svg" width="400" height="300"
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+<math class="big" displaystyle="true"><mi>x</mi><mo>=</mo><mroot><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mn>3</mn></mroot></math>
+
+</p>
+<p>Se você achar que a matemática acima não processar corretamente (especialmente se a raiz radical não se estende para o fundo da fração built-up), em seguida, faça o download e instalar as fontes de STIX http://www.mozilla. org / projects / MathML / fonts / stix / STIXBeta.zip para a pasta de seu sistema operacional de fonte (no caso do Microsoft Windows ou é WINDOWS / FONTS pasta ou pasta WINNT / Fonts) e reinicie Multiflow a fim de tornar a matemática melhor.</p>
+<p>Você pode digitar e editar HTML + + MathML SVG, em um ambiente WYSIWYG. Para carregar um arquivo use HTML5 File-> botão Abrir acima. Estilo de parágrafo / style Character / MathML em um arquivo HTML 5 é exibido à direita do ParaStyle botão acima. A marcação HTML5 do parágrafo clicado pode ser visto na janela de código cinza abaixo. O parágrafo clicado irá adquirir um fundo branco, indicando que é editável. CTRL +, CTRL é usado zoom-in e zoom-out texto destacado. Botão Insert é usado para inserir um moderno TeX-like UTN28 de entrada para gerar HTML + formato MathML (há também uma caixa de UTN28 separada abaixo para a criação de MathML). A marcação na caixa cinza-abaixo pode ser atualizado para o parágrafo pressionando "Change TUXML" botão.</p>
+<p>A percorrer, digite seu URL na caixa à direita do rótulo URL e pressione ALT + b. Se você clicar sobre o texto e pressione CTRL + q, então ele irá levá-lo de volta para o editor do navegador. A partir do editor HTML5 se você selecionar um pedaço de texto e pressione CTRL + g, então ele irá procurar usando DuckDuckGo.com para essa palavra. Se você pressionar CTRL + d então procurar o www.thefreedictionary.com para ele. Da mesma forma CTRL + r para o Google Scholar e CTRL + w é para a Wikipédia. Você também pode botão direito do mouse e escolha a ação em vez de usar as teclas de atalho. Clicando sobre o texto e pressionar CTRL + q (ou ESC?) Irá levá-lo de volta para o documento que estava editando. Um novo menu "Janelas" para a mudança de Editor / Browser / Scratch. O Bloco de rascunho, por enquanto está sendo usado para despejo de dados, como citações de Google Acadêmico. Para mudar para outros scripts, como indianos, etc Arbaic um pode usar o Google widget Transliteration disponível nos menus do botão direito. Para inserir caracteres especiais use o menu Unicode no popup do botão direito.</p>
+<p>SVG marcação é suportado e elementos do vetor podem ser inseridos e editados usando o menu Inserir-> Vector. A marcação SVG pode ser editado na caixa cinza e "Change TUXML" botão irá atualizar as alterações feitas. Apoio ChemML está a caminho ...</p>
+<p>Input / output formatos DOCX, ODF / ODT, ePub são suportados nativamente. Para converter LaTeX / XeLaTeX documento para XHTML + MathML documento, por favor, use um utilitário perl, LaTeXML, que pode ser baixado e instalado a partir http://dlmf.nist.gov/LaTeXML/. Para ler Text-PDF utilize o comando interno pdftohtml Linux usando a biblioteca Poppler.</p>
+<p>O pacote inclui o debian fontes STIX necessário e você pode baixar os arquivos mais recentes multiflow.deb de http://sourceforge.net/projects/multiflow/</p>
+ 
+</body>
+</html>
+

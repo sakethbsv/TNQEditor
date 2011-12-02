@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+	  <!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+	  <!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+	  <!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+	  %HTMLItems;
+	  %MathItems;
+	  %SVGItems;
+]>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML">
+      <menu id="edit-menus" label="&edit.label;" accesskey="e" >
+	<menupopup id="edit-menu-popup">
+	  <menuitem label="ShowTOC" oncommand="m$.showTOC();" accesskey="s"/>
+	  <menuitem label="ShowDOC" oncommand="m$.showDOC();" accesskey="h"/>
+	  <menuitem label="UpliftDoc" oncommand="m5.upliftDoc();" accesskey="u"/>
+	  <menuitem label="RemoveDivs" oncommand="m5.removeDivs();" accesskey="r"/>
+	  <menu label="Format" accesskey="f">
+	      <menupopup id="format_editMenu_popup">
+		<menuitem label="undo" oncommand="m$.makeEdit('undo');" accesskey="z" />
+		<menuitem label="redo" oncommand="m$.makeEdit('redo');" accesskey="r" />
+		<menuitem label="bold" oncommand="m$.makeEdit('bold');" accesskey="b" key="edit-bold-key"/>
+		<menuitem label="italic" oncommand="m$.makeEdit('italic');" accesskey="i" key="edit-italic-key"/>
+		<menuitem label="superscript" oncommand="m$.makeEdit('superscript');" accesskey="="/>
+		<menuitem label="subscript" oncommand="m$.makeEdit('subscript');" accesskey="-"/>
+		<menuitem label="BreakLines" oncommand="m$.breakLines();" accesskey="."/>
+		<menuitem label="RemoveLineBreaks" oncommand="m$.removeLineBreaks();" accesskey=","/>
+	      </menupopup>
+	  </menu>	 
+	  <menu label="Analyze" accesskey="a">
+	      <menupopup id="analyze_editMenu_popup">
+		<menuitem label="CountWordFrequency" oncommand="e$.outputWordFreq();" accesskey="x"/>
+		<menuitem label="SingleLetterVariables" oncommand="e$.getSingleLetterVariables();" accesskey="s"/>
+		<menuitem label="ProperNounsWords" oncommand="e$.outputProperNounWords();" accesskey="n"/>
+		<menuitem label="MarkHyphenatedWords" oncommand="e$.outputHyphenWords();" accesskey="h"/>
+		<menuitem label="MarkAllSentenceBreaks" oncommand="m$.markAllSentenceBreaks();" accesskey="n"/>
+		<menuitem label="Report OID usage" oncommand="o$.reportOIDs();" accesskey="o"/>
+		<menuitem label="Query REST" oncommand="o$.reportPopAuthorInMendeley();" accesskey="q"/>
+		<menuitem label="POS Tagger" oncommand="o$.POStag('S. Pepping, On the Knuths pagination algorithm, TUG Boat, 12 (2009) 234');" accesskey="q"/>
+		<menuitem label="Get Citations" oncommand="m$.showOnlyBibTeXCitations();" accesskey="x"/>
+	      </menupopup>
+	  </menu>
+	  <menu label="Links" accesskey="l">
+	      <menupopup id="link_editMenu_popup">
+		<menuitem label="CreateLink" oncommand="m$.createLink();" accesskey="l"/>
+		<menuitem label="CountAllLinks" oncommand="m$.countAllLinks();" accesskey="a"/>
+		<menuitem label="xref" oncommand="m$.applyXref();" accesskey="x"/>
+	      </menupopup>
+	  </menu>
+	  <menu label="Table" accesskey="t">
+	      <menupopup id="table_editMenu_popup">
+		<menuitem label="Style Table Column" oncommand="m$.styleTableColumn();" accesskey="c"/>
+		<menuitem label="Add Table Column" oncommand="m$.addTableColumn();" accesskey="a"/>
+		<menuitem label="Remove Table Column" oncommand="m$.removeTableColumn();" accesskey="c"/>
+		<menuitem label="Insert Table Row" oncommand="m$.addTableRow();" accesskey="i"/>
+		<menuitem label="Remove Table Row" oncommand="m$.removeTableRow();" accesskey="r"/>
+	      </menupopup>
+	  </menu>
+	</menupopup>
+      </menu>
+</overlay>

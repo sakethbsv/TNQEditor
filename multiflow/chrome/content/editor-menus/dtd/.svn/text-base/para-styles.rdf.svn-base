@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:nc="http://home.netscape.com/NC-rdf#" xmlns:tux="http://www.tnq.co.in/TUX-rdf#">
+  <rdf:Description  rdf:title="TUX Paragraph styles" rdf:about="urn:root">
+    <tux:head>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="ArticleTitle" nc:key="t" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SubTitle" nc:key="s" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AltTitle" nc:key="a" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AltSubTitle" nc:key="i" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Authors" nc:key="u" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Affiliation" nc:key="f" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="CorrespondingAuthor" nc:key="c" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AbstractTitle" nc:key="b" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Abstract" nc:key="t" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AbstractPara" nc:key="p" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Keywords" nc:key="k" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Artfootnote" nc:key="f" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Miscellaneous" nc:key="m" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Sterochem" nc:key="s" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="LRH" nc:key="L" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="RRH" nc:key="R" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Dedication" nc:key="d" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Presentedby" nc:key="p" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:head>
+    <tux:sections>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="SectionA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SectionB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SectionC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SectionD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SectionE" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SectionF" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:sections>
+    <tux:body>
+      <rdf:Seq>
+    	<rdf:li><rdf:Description nc:name="Paragraph" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="TextBox" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ParaWithoutIndent" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayMath" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayQuote" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayGraphics" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayFigureCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayTableCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayTextbox" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="DisplayChem" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Enunciation" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Introduction" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Salutation" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Nomenclature" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AcknowledgmentTitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Acknowledgment" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Poetry" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Stanza" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Intro" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ExamTitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Question" nc:role="Default"/></rdf:li>	
+	<rdf:li><rdf:Description nc:name="Answer" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:body>
+    <tux:list>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="ListTitle" nc:role="Default"/></rdf:li>	
+	<rdf:li><rdf:Description nc:name="ListA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ListB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ListC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ListD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ListE" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="ListF" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:list>
+    <tux:box>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="Boxtitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionE" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxSectionF" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BoxFootnote" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:box>
+    <tux:floats>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="FigCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="MultiFigCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="TableCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="MultiTableCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="TableFootnote" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Legend" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Source" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Footnote" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="SchemeCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AudioCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="VideoCaption" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="TextboxCaption" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:floats>
+    <tux:appendix>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="AppSectionA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AppSectionB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AppSectionC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AppSectionD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AppSectionE" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="AppSectionF" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:appendix>
+    <tux:tail>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="BibTitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibSectionA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibSectionB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibSectionC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="FurtherReadingTitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItem" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemMulti" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemOref" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemMultiOref" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemNote" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemNoteMulti" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="BibItemPara" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="Biography" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:tail>
+    <tux:glossary>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="Glossary" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListAtitle" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="GListE" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:glossary>
+    <tux:index>
+      <rdf:Seq>
+	<rdf:li><rdf:Description nc:name="IndexTitle" nc:role="Default"/></rdf:li>	
+	<rdf:li><rdf:Description nc:name="IndexSecTitle" nc:role="Default"/></rdf:li>	
+	<rdf:li><rdf:Description nc:name="IndexA" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="IndexB" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="IndexC" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="IndexD" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="IndexE" nc:role="Default"/></rdf:li>
+	<rdf:li><rdf:Description nc:name="IndexF" nc:role="Default"/></rdf:li>
+      </rdf:Seq>
+    </tux:index>
+  </rdf:Description>
+</rdf:RDF>
+
+

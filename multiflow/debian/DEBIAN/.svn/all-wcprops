@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/multiflow/!svn/ver/215/trunk/debian/DEBIAN
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/multiflow/!svn/ver/115/trunk/debian/DEBIAN/control
+END
+postinst
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/multiflow/!svn/ver/215/trunk/debian/DEBIAN/postinst
+END
+prerm
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/multiflow/!svn/ver/115/trunk/debian/DEBIAN/prerm
+END

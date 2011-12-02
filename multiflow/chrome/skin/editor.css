@@ -1,0 +1,47 @@
+#xlabel { font-weight: bold; }
+
+prefwindow { opacity: 1.0; }
+window { opacity: 1.0; }
+.title { font-size: 20pt; color: blue; }
+.input-box { padding: 0; vertical-align:middle; }
+
+menubar,menu,menuitem {
+    color: black;
+    font-size: 10pt;
+}
+
+toolbarseparator { color: black !important; }
+
+#parahtml {
+    background-color: silver;
+    color: green;
+    font-size: 14pt;
+    padding: 0px 0px;
+    resize: horizontal;
+    overflow: -moz-scrollbars-vertical;
+    width: 100%;
+}
+
+
+#browser-urlbox {
+    -moz-appearance: none !important;    
+    background-color: Silver !important;
+    color: green;
+}
+
+textbox.insert {
+}
+
+caption.urlbox {
+}
+
+
+
+.update-tuxml {
+background-color:silver;
+font-size:10pt;
+border: solid 3px black;
+-moz-border-radius:  10pt/10pt;
+cell-padding: 2px;0px;
+width: 20px;
+}

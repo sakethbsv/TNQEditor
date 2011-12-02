@@ -1,0 +1,14 @@
+<!ENTITY circle.sample "&lt;svg>&lt;g>&lt;circle stroke-opacity=&quot;1&quot; fill-opacity=&quot;1&quot; stroke-width=&quot;5&quot; stroke=&quot;#000000&quot; fill=&quot;#FF0000&quot;  r=&quot;25&quot; cy=&quot;50&quot; cx=&quot;50&quot; onmousedown=&quot;captureVector(this,event);&quot;  onmouseup=&quot;releaseVector(this,event);&quot;/>&lt;/g>&lt;/svg>">
+
+<!ENTITY ellipse.sample "&lt;svg>&lt;g>&lt;ellipse cx=&quot;100&quot; cy=&quot;50&quot; rx=&quot;60&quot; ry=&quot;40&quot; style=&quot;fill:rgb(200,100,50);stroke:rgb(0,0,100);stroke-width:2&quot;/>&lt;/g>&lt;/svg>">
+
+<!ENTITY rect.sample "&lt;svg>&lt;g>&lt;rect stroke-opacity=&quot;1&quot; fill-opacity=&quot;1&quot; stroke-width=&quot;5&quot; stroke=&quot;#000000&quot; fill=&quot;#FF0000&quot; height=&quot;50&quot; width=&quot;50&quot; y=&quot;0&quot; x=&quot;0&quot;/>&lt;/g>&lt;/svg>">
+
+<!ENTITY polygon.sample "&lt;svg>&lt;g>&lt;polygon points=&quot;120,50 200,110 70,150&quot; style=&quot;fill:#cccccc; stroke:#000000;stroke-width:1&quot;/>&lt;/g>&lt;/svg>">
+
+<!ENTITY line.sample "&lt;svg>&lt;g>&lt;line stroke-opacity=&quot;1&quot; fill-opacity=&quot;1&quot; fill=&quot;none&quot; stroke-width=&quot;5&quot; stroke=&quot;#000000&quot; y2=&quot;150&quot; x2=&quot;200&quot; y1=&quot;150&quot; x1=&quot;0&quot;/>&lt;/g>&lt;/svg>">
+
+<!ENTITY text.sample "&lt;svg>&lt;g>&lt;text x=&quot;50&quot; y=&quot;50&quot;>Hello World&lt;/text>&lt;/g>&lt;/svg>">
+
+<!ENTITY pencil.sample "&lt;svg class=&quot;pencil&quot;>&lt;g>&lt;path stroke=&quot;#000000&quot; fill=&quot;#FFFFFF&quot; d=&quot;M0 0&quot;/>&lt;/g>&lt;/svg>">
+

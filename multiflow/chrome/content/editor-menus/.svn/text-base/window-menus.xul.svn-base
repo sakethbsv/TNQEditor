@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+	  <!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+	  <!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+	  <!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+	  %HTMLItems;
+	  %MathItems;
+	  %SVGItems;
+]>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <menu id="window-menus" label="Windows" accesskey="f">
+    <menupopup id="window-menu-popup">
+      <menuitem label="Editor"  oncommand="m$.initEditor();" accesskey="o"/>
+      <menuitem label="Browser"  oncommand="m$.initBrowser();" accesskey="n"/>
+      <menuitem label="Scratch"  oncommand="m$.initScratch();" accesskey="b"/>
+    </menupopup>
+  </menu>
+</overlay>

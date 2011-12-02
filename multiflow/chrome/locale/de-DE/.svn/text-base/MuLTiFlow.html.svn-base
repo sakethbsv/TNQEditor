@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+<link rel="stylesheet" id="webcss" type="text/css" href="chrome://multiflow/content/html/css/tux-Black-on-Wheat.css" media="screen" />
+<link rel="stylesheet" id="printcss" type="text/css" href="chrome://multiflow/content/html/css/tuxprint.css" media="print" />
+<script type="text/javascript" src="chrome://multiflow/content/html/mathml.js"></script>
+<title>MuLTiFlow 5 dokument</title>
+<meta name="author" content="Anonymous" />
+</head>
+<body onload="mathconvert();">
+<h1>Willkommen bei MultiFlow</h1>
+<p>Ein Browser/Editor für S&amp;T-Dokumente, der lokale Word- oder HTML5-Dateien kann öffnen/bearbeiten oder im Internet kann surfen.</p>
+<p class="big">
+<embed src="chrome://multiflow/content/html/butterfly.svg" width="400" height="300"
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+<math class="big" displaystyle="true"><mi>x</mi><mo>=</mo><mroot><mrow><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mn>3</mn></mroot></math>
+
+</p>
+<p>Wenn Sie feststellen, daß der oben genannte mathematische Formel nicht richtig dargestellt ist (vor allem, wenn die  Quadratwurzel sich nicht bis auf die Unterseite des aufgebauten Fraktion verlängert), dann installieren Sie bitte die STIX Fonts von <a href="http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip">http://www.mozilla.org/projects/mathml/fonts/stix/STIXBeta.zip</a> in den Fonts-Verzeichnis Ihres Betriebssystems (im Fall von Microsoft Windows ist das entweder der Windows/Fonts-Verzeichnis oder der WINNT/Fonts-Verzeichnis) und starten Sie MultiFlow neu um mathematische Formeln besser dar zu stellen.</p>
+<p>Sie können HTML+MathML+SVG eingeben und bearbeiten in einer WYSIWYG-Umgebung. Verwenden Sie die <b>Datei->Öffnen</b>-Taste an der Oberseite um eine HTML5-Datei zu laden. Absatzstil/Zeichenstil/MathML in einer HTML5-Datei ist auf der rechten Seite der <b>ParaStyle</b>-Taste am oberen Rand angezeigt. Die HTML5-Markup der angeklickten Absatz ist in den Grauen Code-Fenster unten zu sehen. Die angeklickte Absatz erwerbt einen weißen Hintergrund, was zeigt, daß es bearbeitet werden kann. STRG+, STRG- dient um den markierten Text zu vergrößern und verkleinern. Die <b>Einfügen</b>-Taste wird verwendet, um eine moderne TeX-ähnliche UTN28 Eingabe ein zu fügen um HTML+MathML-Format zu generieren (es gibt auch ein separates UTN28 Feld am unteren Rand für die Erstellung von MathML). Das Markup in dem grauen Feld am unteren Rand kann aktualisiert worden in den Absatz, durch Drücken der "Change TUXML"-Taste.</p>
+<p>Um zu surfen, geben Sie Ihre URL in das Feld rechts neben des URL-Etiketts und drücken Sie ALT+b. Wenn Sie auf den Text klicken und STRG+q drücken dann gehen Sie von dem Browser in den Editor zurück. Im HTML5-Editor, wenn Sie einen Text wählen und dann STRG+g drücken, wird auf DuckDuckGo.com nach diesen Text gesucht. Wenn Sie STRG+d drücken dann wird auf www.thefreedictionary.com gesucht. Ditto STRG+r für Google Scholar und STRG+w für Wikipedia. Statt der Verwendung von Tastenkombinationen können Sie auch die rechte Maustaste klicken und die gewünschte Aktion wählen. Auf den Text klicken und STRG+q (oder ESC?) drücken bringt Sie zurück zum Dokument das Sie gerade bearbeiteten. Sie verwenden das Menü "Fenster" um zwischen Editor/Browser/Notizblock zu wechseln. Der Notizblock wird vorläufig verwendet um Daten wie Zitate aus Google Scholar zu dumpen. Zum Umschalten auf andere Skripte wie Indisch, Arabisch usw. nutzen Sie bitte die Google Transliteration Option in den Menüs unter der rechten Maustaste. Zum Einfügen von Sonderzeichen, verwenden Sie die Unicode-Option unter der rechten Maustaste.</p>
+<p>SVG-Markup wird unterstützt, und Vektor-Elemente können hinzugefügt und bearbeitet werden über das Menü <b>Einfügen->Vector</b>. Die SVG-Markup kann in dem grauen Feld bearbeitet werden und die "Change TUXML"-Taste wird die Änderungen aktualisieren. ChemML Unterstützung kommt...</p>
+<p>Die Input/Output-Formate DocX, ODF/ODT, ePub sind nativ unterstützt. Um ein LaTeX/XeLaTeX Dokument zu konvertieren nach ein XHTML+MathML-Dokument können Sie ein Tool in Perl, LaTeXML, verwenden, das heruntergeladen und installiert werden kann von <a href="http://dlmf.nist.gov/LaTeXML/">http://dlmf.nist.gov/LaTeXML/</a>. Für das Lesen von Text in einer PDF-Datei, verwenden Sie die Linux-Befehlszeile <code>pdftohtml</code>, gebaut mit der Poppler Bibliothek.</p>
+<p>Das Debian-Paket enthält die erforderlichen STIX Fonts. Sie können die neueste multiflow.deb Dateien von <a href="http://sourceforge.net/projects/multiflow/">http://sourceforge.net/projects/multiflow/</a> herunterladen.</p>
+ 
+</body>
+</html>
+

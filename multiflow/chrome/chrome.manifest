@@ -1,0 +1,31 @@
+content	multiflow	content/	contentaccessible=yes
+content	multiflow	content/
+skin 	multiflow	classic/1.0	skin/
+
+locale	multiflow	en-US	locale/en-US/
+locale	multiflow	de-DE	locale/de-DE/
+locale	multiflow	es-ES	locale/es-ES/
+locale	multiflow	pt-PT	locale/pt-PT/
+locale	multiflow	fr-FR	locale/fr-FR/
+locale	multiflow	ru-ES	locale/ru-RU/
+locale	multiflow	nl-NL	locale/nl-NL/
+locale	multiflow	ta-TA	locale/ta-TA/
+locale	multiflow	te-TE	locale/te-TE/
+locale	multiflow	ml-ML	locale/ml-ML/
+locale	multiflow	bn-BN	locale/bn-BN/
+
+locale	branding en-US	locale/branding/
+locale	branding de-DE	locale/branding/
+locale	branding es-ES	locale/branding/
+locale	branding pt-PT	locale/branding/
+locale	branding ru-RU	locale/branding/
+locale	branding fr-FR	locale/branding/
+locale	branding nl-NL	locale/branding/
+locale	branding ta-TA	locale/branding/
+locale	branding te-TE	locale/branding/
+locale	branding ml-ML	locale/branding/
+locale	branding bn-BN	locale/branding/
+
+overlay	chrome://browser/content/browser.xul	chrome://multiflow/content/browser/editor-overlay.xul
+
+content branding branding/

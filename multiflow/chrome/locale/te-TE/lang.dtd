@@ -1,0 +1,25 @@
+<!ENTITY file.label "దస్త్రము">
+<!ENTITY open.label "తెరచు">
+<!ENTITY new.label "కొత్త">
+<!ENTITY browse.label "மேலோட்டம்">
+<!ENTITY convertXML.label "XMLக்கு மாற்று">
+<!ENTITY save.label "దాచు">
+<!ENTITY saveas.label "ఇలాదాచు">
+<!ENTITY export.label "ఎగుమతిచేయి">
+<!ENTITY close.label "మూసివే">
+
+<!ENTITY edit.label "సరిచూచు">
+
+<!ENTITY insert.label "ప్రవేశపెట్టు">
+
+<!ENTITY parastyle.label "పరిచ్చేదం">
+
+<!ENTITY tools.label "పనిముట్లు">
+
+<!ENTITY url.label "இணைமுகவரி">
+
+<!ENTITY print.label "ముద్రించు">
+
+<!ENTITY setting.label "అభీష్టములు">
+
+<!ENTITY math.label "கணக்கு">

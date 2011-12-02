@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!--
+    This file is part of MuLTiFlow.
+
+    MuLTiFlow is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    MuLTiFlow is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<prefwindow id="appPreferences" title="MuLTiFlow Settings"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		width="400" height="600" onload="p$.prefInit();" buttons="accept,cancel,help" ondialogaccept="m$.updatePrefs();p$.restartApp();" oncommand="m$.updatePrefs();">
+  <prefpane id="pane1" label="settings">
+    <preferences>
+      <preference id="pref1" name="general.useragent.locale" type="string"/>
+      <preference id="pref2" name="extensions.multiflow.styleTheme" type="string" instantApply="true"/>
+      <preference id="pref3" name="extensions.multiflow.showCodeWindow" type="string" instantApply="true"/>
+      <preference id="pref4" name="extensions.multiflow.perlPath" type="string" instantApply="true"/>
+      <preference id="pref5" name="extensions.multiflow.abiwordPath" type="string" instantApply="true"/>
+      <preference id="pref6" name="extensions.multiflow.latexmlPath" type="string" instantApply="true"/>
+      <preference id="pref7" name="extensions.multiflow.docTitle" type="string" instantApply="true"/>
+      <preference id="pref8" name="extensions.multiflow.author" type="string" instantApply="true"/>
+      <preference id="pref9" name="extensions.multiflow.columns" type="string" instantApply="true"/>
+      <preference id="pref20" name="extensions.multiflow.recentFile" type="string" instantApply="true"/>
+    </preferences>
+    <groupbox>
+      <vbox>
+	<button label="Start MuLTiFlow Editor" oncommand="p$.startMuLTiFlowEditor();" flex="0"/>
+      </vbox>
+    </groupbox>
+    <groupbox>
+      <vbox>
+	<caption label="Language" />
+	<menulist id="locale" label="locale" preference="pref1" width="200" height="25">
+	  <menupopup>
+	    <menuitem label="English" value="en-US" selected="true"  />
+	    <menuitem label="Tamil" value="ta-TA"  />
+	    <menuitem label="Telegu" value="te-TE" />
+	    <menuitem label="Malayalam" value="ml-ML" />
+	    <menuitem label="Bengali" value="bn-BN" />
+	    <menuitem label="Russian" value="ru-RU"  />
+	    <menuitem label="German" value="de-DE"  />
+	    <menuitem label="Spanish" value="es-ES"  />
+	    <menuitem label="Dutch" value="nl-NL"  />
+	    <menuitem label="Portugese" value="pt-PT"  />
+	  </menupopup>
+	</menulist>
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Document Title" />
+      <vbox>
+	<textbox id="docTitle" label="Document Title" preference="pref7" size="15"/>
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Author" />
+      <vbox>
+	<textbox id="author" label="Author" preference="pref8" size="15"/>
+      </vbox>
+    </groupbox>
+    <groupbox>
+      <vbox>
+	<caption label="Style Themes" />
+	<menulist id="styleTheme" label="Style Theme" preference="pref2" width="200" height="25">
+	  <menupopup>
+	    <menuitem label="Black-on-Wheat" value="Black-on-Wheat" selected="true" />
+	    <menuitem label="Black-on-Grey" value="Black-on-Grey" selected="true" />
+	    <menuitem label="Green-on-Black" value="Green-on-Black" />
+	    <menuitem label="Blue-on-Black" value="Blue-on-Black" />
+	    <menuitem label="White-on-Black" value="White-on-Black" />
+	  </menupopup>
+	</menulist>
+      </vbox>
+    </groupbox>
+    <groupbox>
+      <vbox>
+	<caption label="Number of Text Columns" />
+	<menulist id="columns" label="Number of Columns" preference="pref9">
+	  <menupopup>
+	    <menuitem label="1" value="1" selected="true" />
+	    <menuitem label="2" value="2" />
+	    <menuitem label="3" value="3" />
+	  </menupopup>
+	</menulist>
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Code Area" />
+      <vbox>
+	<menulist id="showCodeWindow" label="Show Code Area" preference="pref3">
+	  <menupopup>
+	    <menuitem label="Show" value="1" selected="true"/>
+	    <menuitem label="Hide" value="0"  />
+	  </menupopup>
+	</menulist>
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Perl Path" />
+      <vbox>
+	<textbox id="perlPath" label="Perl Path" preference="pref4" size="15" />
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Abiword Path" />
+      <vbox>
+	<textbox id="abiwordPath" label="Abiword Path" preference="pref5" size="15" />
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="LaTeXML Path" />
+      <vbox>
+	<textbox id="latexmlPath" label="LaTeXML Path" preference="pref6" size="15" />
+      </vbox>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="Recent File" />
+      <vbox>
+	<textbox id="recentFile" label="Recent File" preference="pref20" size="15" />
+      </vbox>
+    </groupbox>
+  </prefpane>
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/jquery-1.4.2.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/lib/io.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/editor.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/editor-overlay.js" />
+  <script type="application/x-javascript" src="chrome://multiflow/content/js/preferences.js" />
+</prefwindow>
+

@@ -1,0 +1,108 @@
+body { font-family: serif;  margin-left: 10; margin-right: 10; color: lightgreen; background-color: black; font-size: 11pt; }
+p.ArticleTitle, p.articletitle { font-size: 14pt; font-weight: bold; font-family:sans-serif; }
+p.SectionA,p.sectiona,p.BibTitle,p.bibtitle { font-size: 11pt; font-weight: bold; font-family:sans-serif;  text-align: left; }
+p.SectionB,p.sectionb { font-size: 11pt;  font-weight: bold; font-style: italic; font-family:sans-serif; text-align: left; }
+p.SectionC,p.sectionc { font-size: 11pt; font-family:sans-serif; font-style: italic; text-align: left; }
+p.Authors, p.authors { font-size: 11pt; color: green; }
+p.Affiliation, p.affiliation { font-size: 11pt; font-style: italic; color: red; }
+p.AbstractTitle, p.abstracttitle { font-size: 11pt; font-weight: bold; }
+p { font-size: 11pt; }
+p.Keywords, p.keywords { font-size: 11pt; font-style: italic; color: gray;}
+p.Paragraph, p.AbstractPara, p.paragraph, p.abstractpara { font-size: 11pt; text-align: justify; hyphens: auto; }
+p.BibItem, p.bibitem { padding-left: 1.5em; text-indent: -1.5em; font-size: 11pt; color:gray; }
+div.TextBox, div.textbox { border: solid red; }
+#currentParaTUX, *[name=currentParaTUX] { background-color: Grey; -moz-column-count-xx: 2; -moz-column-gap-xx: 10mm; }
+ce_surname { color: yellow; }
+p.big { font-size: 24pt;  }
+p. big>math { font-size: 24pt;  }
+embed { vertical-align: middle; }
+fnm {color:#CCFFCD}
+init {color:#CCFFCD;}
+snm {color:fuchsia;}
+gen {background:cyan;}
+etal {color:deeppink; background:yellow;}
+stl {background:#E0E0E0}
+stlt {color:purple; border:none;}
+isstl {color:#993366}
+sbtl {color:red; background:#E0E0E0}
+sebtl {color:#A52A2A; background:#E0E0E0}
+sbtlt {color:purple; background:#E0E0E0}
+vol {color:yellow;background:#606060}
+iss {color:red}
+nonen {background: blue; color:white; border: thin solid black;}
+adate {color:white; border:none; background:red;}
+odate {color:white; border:none; background:orange;}
+pub {color:white; border:none; background:black;}
+report {border:none; background:grey;}
+city {color:deeppink; border:none;}
+atl {color:green; border:none;}
+atlt {color:#99CC00; border:none;}
+btl {color:red; border:none;}
+btlt {color:#FF9966; border:none;}
+ebtl {color:#993300; border:none;}
+first-page {color:black; background:violet;}
+last-page {color:black; background:violet;}
+citation {border:solid red 4.5pt;padding:0in;}
+edn {color:#DDDD12;}
+msc {border:none; background:cyan;}
+msc1 {border:none; background:cyan;}
+msc2 {border:none; background:cyan;}
+isbn {border:none; background:lightblue;}
+issn {border:none; background:lightblue;}
+conf {border:none; background:grey;}
+deg {color:#339965}
+au    {color:black; background:#B3B2B3}
+p.DisplayMath, p.displaymath { text-align: left; border: solid red; -moz-border-radius: 0.5em; background-x: orange; padding-top:11pt; padding-bottom:6pt; }
+uspace {letter-spacing:10.0pt;background:#FFE079; }
+ospace {letter-spacing:6.0pt;background:#FFDA84; }
+kwd {background:lightblue;}
+p.acknowledgements{background:pink;font-size:15.0pt; }
+eqno { float: right; padding-top: 14pt; }
+.pencil { cursor: url(pencil.png), crosshair; }
+
+p.ListA { margin-left: 1em; }
+p.ListB { margin-left: 2em; }
+p.ListC { margin-left: 3em; }
+p.ListD { margin-left: 4em; }
+p.ListE { margin-left: 5em; }
+p.ListF { margin-left: 6em; }
+
+dt { font-weight: bold; }
+#owlReport td,th { border: solid 2px black; padding: 4pt; }
+#owlReport th { font-family: monospace; font-weight: normal; }
+#owlReport .TableCaption { font-family: sans-serif; }
+
+@font-face {
+    font-family: "ESSTIXThirteen";
+    src: url("../fonts/ESSTIX13.TTF") format("truetype");
+}
+
+mi[mathvariant=script] { font-family: ESSTIXThirteen; }
+mi[mathvariant=italic-script] { font-family: ESSTIXThirteen; font-style: italic; }
+mi[mathvariant=bold-script] { font-family: ESSTIXThirteen; font-weight: bold; }
+mi[mathvariant=bold-italic-script] { font-family: ESSTIXThirteen; font-style: italic;  font-weight: bold; }
+
+
+@font-face {
+    font-family: "ESSTIXFourteen";
+    src: url("../fonts/ESSTIX14.TTF") format("truetype");
+}
+
+mi[mathvariant=double-struck] { font-family: ESSTIXFourteen; }
+mi[mathvariant=italic-double-struck] { font-family: ESSTIXFourteen; font-style: italic; }
+mi[mathvariant=bold-double-struck] { font-family: ESSTIXFourteen; font-weight: bold; }
+mi[mathvariant=bold-italic-double-struck] { font-family: ESSTIXFourteen; font-style: italic;  font-weight: bold; }
+
+
+@font-face {
+    font-family: "ESSTIXFifteen";
+    src: url("../fonts/ESSTIX15.TTF") format("truetype");
+}
+
+mi[mathvariant=fraktur] { font-family: ESSTIXFifteen; }
+mi[mathvariant=italic-fraktur] { font-family: ESSTIXFifteen; font-style: italic; }
+mi[mathvariant=bold-fraktur] { font-family: ESSTIXFifteen; font-weight: bold; }
+mi[mathvariant=bold-italic-fraktur] { font-family: ESSTIXFifteen; font-style: italic;  font-weight: bold; }
+
+br { display: none; }
+#currentParaTUX br, *[name=currentParaTUX] br { display: inline; } 

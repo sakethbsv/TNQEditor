@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://chromelist/locale/ChromeListOverlay.dtd" >
+<!--
+    This file is part of MuLTiFlow.
+
+    MuLTiFlow is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    MuLTiFlow is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay id="MuLTiFlowToolsOverlay"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript"
+       src="chrome://multiflow/content/browser/editor-overlay.js" />
+
+<menupopup id="menu_ToolsPopup">
+       <menuitem insertafter="devToolsSeparator" label="MuLTiFlow Editor"
+       oncommand="startMuLTiFlowEditor();" />
+</menupopup>
+
+</overlay>

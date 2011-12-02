@@ -1,0 +1,25 @@
+<!ENTITY file.label "ശേഖരം">
+<!ENTITY open.label "തുറക്കുക">
+<!ENTITY new.label "പുതിയ">
+<!ENTITY browse.label "പരതുക">
+<!ENTITY convertXML.label "XMLக்கு மாற்று">
+<!ENTITY save.label "സൂക്ഷിയ്ക്കുക">
+<!ENTITY saveas.label "പേരു് മാറ്റി സൂക്ഷിയ്ക്കുക">
+<!ENTITY export.label "TUX മാറ്റി">
+<!ENTITY close.label "അടയ്ക്കുക">
+
+<!ENTITY edit.label "ചിട്ട">
+
+<!ENTITY insert.label "ഇടയ്ക്ക് ചേര്‍ക്കുക">
+
+<!ENTITY parastyle.label "ഖണ്ഡിക">
+
+<!ENTITY tools.label "പണിയായുധങ്ങള്‍">
+
+<!ENTITY url.label "യുആര്‍എല്‍">
+
+<!ENTITY print.label "അച്ചടിയ്ക്കുക">
+
+<!ENTITY setting.label "മുന്‍ഗണനകള്‍">
+
+<!ENTITY math.label "கணக்கு">

@@ -1,0 +1,30 @@
+<!ENTITY frac.markup "<mml:math><mml:mfrac><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>b</mml:mi></mml:mrow></mml:mfrac></mml:math>">
+<!ENTITY frac.sample "&lt;math>&lt;mfrac>&lt;mrow>&lt;mi>a&lt;/mi>&lt;/mrow>&lt;mrow>&lt;mi>b&lt;/mi>&lt;/mrow>&lt;/mfrac>&lt;/math>">
+
+<!ENTITY sqrt.markup "<mml:math><mml:msqrt><mml:mrow><mml:mi>x</mml:mi></mml:mrow></mml:msqrt></mml:math>">
+<!ENTITY sqrt.sample "&lt;math>&lt;msqrt>&lt;mrow>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;/msqrt>&lt;/math>">
+
+<!ENTITY root.markup "<mml:math><mml:mroot><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:mroot></mml:math>">
+<!ENTITY root.sample "&lt;math>&lt;mroot>&lt;mrow>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;mrow>&lt;mn>3&lt;/mn>&lt;/mrow>&lt;/mroot>&lt;/math>">
+
+<!ENTITY sum.markup "<mml:math><mml:munder><mml:mrow><mml:mi>∑</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:munder></mml:math>">
+<!ENTITY sum.sample "&lt;math>&lt;munder>&lt;mrow>&lt;mi>∑&lt;/mi>&lt;/mrow>&lt;mrow>&lt;mi>i&lt;/mi>&lt;/mrow>&lt;/munder>&lt;/math>">
+
+<!ENTITY int.markup "<mml:math><mml:munder><mml:mrow><mml:mi>∫</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:munder></mml:math>">
+<!ENTITY int.sample "&lt;math>&lt;munder>&lt;mrow>&lt;mi>∫&lt;/mi>&lt;/mrow>&lt;mrow>&lt;mi>i&lt;/mi>&lt;/mrow>&lt;/munder>&lt;/math>">
+
+<!ENTITY overbar.markup "<mml:math><mml:mover><mml:mi>a</mml:mi><mml:mo stretchy='true'>-</mml:mo></mml:mover></mml:math>">
+<!ENTITY overbar.sample "&lt;math>&lt;mover>&lt;mi>a&lt;/mi>&lt;mo stretchy='true'>-&lt;/mo>&lt;/mover>&lt;/math>">
+
+<!ENTITY sum2.markup "<mml:math><mml:munderover><mml:mi>∑</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>∞</mml:mi></mml:munderover></mml:math>">
+<!ENTITY sum2.sample "&lt;math>&lt;munderover>&lt;mi>∑&lt;/mi>&lt;mrow>&lt;mi>i&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mrow>&lt;mi>∞&lt;/mi>&lt;/munderover>&lt;/math>">
+
+<!ENTITY int2.markup "<mml:math><mml:munderover><mml:mi>∫</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>∞</mml:mi></mml:munderover></mml:math>">
+<!ENTITY int2.sample "&lt;math>&lt;munderover>&lt;mi>∫&lt;/mi>&lt;mrow>&lt;mi>i&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mrow>&lt;mi>∞&lt;/mi>&lt;/munderover>&lt;/math>">
+
+<!ENTITY matrix.markup "<mml:math><mml:mtable><mml:mtr><mml:mtd><mml:mi>a</mml:mi></mml:mtd><mml:mtd><mml:mi>b</mml:mi></mml:mtd><mml:mtd><mml:mi>c</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>d</mml:mi></mml:mtd><mml:mtd><mml:mi>e</mml:mi></mml:mtd><mml:mtd><mml:mi>f</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mi>g</mml:mi></mml:mtd><mml:mtd><mml:mi>h</mml:mi></mml:mtd><mml:mtd><mml:mi>i</mml:mi></mml:mtd></mml:mtr></mml:mtable></mml:math>">
+<!ENTITY matrix.sample "&lt;math>&lt;mtable>&lt;mtr>&lt;mtd>&lt;mi>a&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>b&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>c&lt;/mi>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mi>d&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>e&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>f&lt;/mi>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mi>g&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>h&lt;/mi>&lt;/mtd>&lt;mtd>&lt;mi>i&lt;/mi>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;/math>">
+
+
+
+

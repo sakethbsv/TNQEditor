@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd">
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	 xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <hbox id="code-window">
+    <html:table border="0" padding="0" width="100%">
+      <html:tr>
+	<html:td padding="0">
+	  <html:textarea id="parahtml" multiline="true" rows="5" onclick="m$.focusCodeArea();">
+	  </html:textarea>
+	</html:td>
+	<html:td onclick="m$.askAndChangeParaTUX()" class="update-tuxml">
+	  Update TUXML
+	</html:td>
+      </html:tr>
+    </html:table>
+  </hbox>
+</overlay>

@@ -1,0 +1,73 @@
+div.article { margin: 0; padding: 0; max-width: 190mm;  }
+div.body_ { margin: 0; padding: 0; -moz-column-count: 2; -moz-column-gap: 5mm; }
+p.Paragraph { 
+    text-align: justify;
+    font-family: 'times new roman', 'FreeSerif', serif;
+    font-size: 10pt;
+    line-height: 12pt;
+    word-spacing: -0.5px;
+}
+
+p.articletitle, articletitle { display: block; font-size: 14pt; font-weight: bold; font-family:sans-serif; }
+p.sectiona, sectiona, p.references, references { font-size: 11pt; font-weight: bold; font-family:sans-serif;  text-align: left; }
+p.sectionb, sectionb { font-size: 11pt;  font-weight: bold; font-style: italic; font-family:sans-serif; text-align: left; }
+p.sectionc, sectionc { font-size: 11pt; font-family:sans-serif; font-style: italic; text-align: left; }
+p.authors, authors { font-size: 10pt; color: green; }
+p.affiliation, affiliation { font-size: 10pt; font-style: italic; color: red; }
+p.abstracttitle, abstracttitle { font-size: 10pt; font-weight: bold; }
+p { font-size: 10pt; text-align: justify; hyphens: auto; }
+p.keywords, keywords { font-size: 10pt; font-style: italic; color: gray;}
+p.paragraph, p.abstractpara { font-size: 10pt; line-height: 12pt; text-align: justify; hyphens: auto; }
+p.bibitem, bibitem { padding-left: 1.5em; text-indent: -1.5em; font-size: 10pt; color:gray; }
+p.figcaption { page-break-after: auto; }
+img { page-break-before: auto; }
+p.caption { page-break-after: auto; }
+div.textbox { border: solid red; }
+#currentParaTUX { background-color: white; }
+ce_surname { color: yellow; }
+p.big { font-size: 24pt;  }
+p. big>math { font-size: 24pt;  }
+embed { vertical-align: middle; }
+fnm {color:#CCFFCD}
+init {color:#CCFFCD;}
+snm {color:fuchsia;}
+gen {background:cyan;}
+etal {color:deeppink; background:yellow;}
+stl {background:#E0E0E0}
+stlt {color:purple; border:none;}
+isstl {color:#993366}
+sbtl {color:red; background:#E0E0E0}
+sebtl {color:#A52A2A; background:#E0E0E0}
+sbtlt {color:purple; background:#E0E0E0}
+vol {color:yellow;background:#606060}
+iss {color:red}
+nonen {background: blue; color:white; border: thin solid black;}
+adate {color:white; border:none; background:red;}
+odate {color:white; border:none; background:orange;}
+pub {color:white; border:none; background:black;}
+report {border:none; background:grey;}
+city {color:deeppink; border:none;}
+atl {color:green; border:none;}
+atlt {color:#99CC00; border:none;}
+btl {color:red; border:none;}
+btlt {color:#FF9966; border:none;}
+ebtl {color:#993300; border:none;}
+first-page {color:black; background:violet;}
+last-page {color:black; background:violet;}
+citation {border:solid red 4.5pt;padding:0in;}
+edn {color:#DDDD12;}
+msc {border:none; background:cyan;}
+msc1 {border:none; background:cyan;}
+msc2 {border:none; background:cyan;}
+isbn {border:none; background:lightblue;}
+issn {border:none; background:lightblue;}
+conf {border:none; background:grey;}
+deg {color:#339965}
+au    {color:black; background:#B3B2B3}
+p.displaymath { padding-top: 10pt; padding-bottom: 6pt; page-break-before: auto; }
+uspace { letter-spacing:10.0pt;background:#FFE079; }
+ospace { letter-spacing:6.0pt;background:#FFDA84; }
+kwd {background:lightblue;}
+p.acknowledgements {background:pink;font-size:15.0pt;font-family:"Times New Roman"; }
+eqno { float: right; padding-top: 14pt; }
+

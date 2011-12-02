@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/multiflow/!svn/ver/167/trunk/chrome/content/xsl
+END
+odtStyles.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/multiflow/!svn/ver/114/trunk/chrome/content/xsl/odtStyles.xsl
+END
+odt2html.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/multiflow/!svn/ver/114/trunk/chrome/content/xsl/odt2html.xsl
+END
+docx2tux.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/multiflow/!svn/ver/114/trunk/chrome/content/xsl/docx2tux.xsl
+END
+docxStyles.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/multiflow/!svn/ver/114/trunk/chrome/content/xsl/docxStyles.xsl
+END
+odt2tux.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/multiflow/!svn/ver/114/trunk/chrome/content/xsl/odt2tux.xsl
+END

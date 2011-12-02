@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://multiflow/locale/lang.dtd" [
+	  <!ENTITY % HTMLItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/HTML-items.ent">
+	  <!ENTITY % MathItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/Math-items.ent">
+	  <!ENTITY % SVGItems SYSTEM "chrome://multiflow/content/editor-menus/dtd/SVG-items.ent">
+	  %HTMLItems;
+	  %MathItems;
+	  %SVGItems;
+]>
+<!--
+This file is part of MuLTiFlow.
+
+MuLTiFlow is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MuLTiFlow is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MuLTiFlow.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<overlay xmlns:html="http://www.w3.org/1999/xhtml"
+	     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	     xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <menu id="insert-menus" label="&insert.label;" accesskey="i" tabindex="3">
+    <menupopup id="insert-menu-popup">
+      <menuitem label="Ordered List" oncommand="m$.makeEdit('inserthtml','&ol.sample;');" accesskey="o"/>
+      <menuitem label="Bulleted List" oncommand="m$.makeEdit('inserthtml','&ul.sample;');" accesskey="u"/>
+      <menuitem label="Definition List" oncommand="m$.makeEdit('inserthtml','&dl.sample;');" accesskey="d"/>
+      <menuitem label="Table" oncommand="m$.makeEdit('inserthtml','&table.sample;');" accesskey="t"/>
+      <menuitem label="Graphic" oncommand="m$.insertGraphic();" accesskey="g"/>
+      <menu id="math-menu" label="&math.label;" accesskey="m">
+	<menupopup id="mathMenu_popup">
+	  <menuitem label="frac" oncommand="m$.makeMathEdit('inserthtml','&frac.sample;');" accesskey="f" minwidth="75" minheight="20">
+	    frac-&frac.markup;
+	  </menuitem>
+	  <menuitem label="sqrt" oncommand="m$.makeMathEdit('inserthtml','&sqrt.sample;');" accesskey="s" minwidth="75" minheight="20">
+	    sqrt-&sqrt.markup;
+	  </menuitem>
+	  <menuitem label="root" oncommand="m$.makeMathEdit('inserthtml','&root.sample;');" accesskey="r" minwidth="75" minheight="20">
+	    root-&root.markup;
+	  </menuitem>
+	  <menuitem label="under_sum" oncommand="m$.makeMathEdit('inserthtml','&sum.sample;') " accesskey="u" minwidth="75" minheight="20">
+	    sum-&sum.markup;
+	  </menuitem>
+	  <menuitem label="under_int" oncommand="m$.makeMathEdit('inserthtml','&int.sample;')" accesskey="i" minwidth="75" minheight="20">
+	    int-&int.markup;
+	  </menuitem>
+	  <menuitem label="over" oncommand="m$.makeMathEdit('inserthtml','&overbar.sample;')" accesskey="o" minwidth="75" minheight="20">
+	    overbar-&overbar.markup;
+	  </menuitem>
+	  <menuitem label="underover_sum" oncommand="m$.makeMathEdit('inserthtml','&sum2.sample;');" accesskey="=" minwidth="75" minheight="20">
+	    sum2-&sum2.markup;
+	  </menuitem>
+	  <menuitem label="underover_int" oncommand="m$.makeMathEdit('inserthtml','&int2.sample;');" accesskey="=" minwidth="75" minheight="20">
+	    int2-&int2.markup;
+	  </menuitem>
+	  <menuitem label="matrix" oncommand="m$.makeMathEdit('inserthtml','&matrix.sample;');" accesskey="=" minwidth="75" minheight="20">
+	    matrix-&matrix.markup;
+	  </menuitem>
+	</menupopup>
+      </menu>
+      <menu id="svg-menu" label="Vector" accesskey="v">
+	<menupopup id="svgMenu_popup">
+	  <menuitem label="circle" oncommand="m$.makeSVGEdit('inserthtml','&circle.sample;');" accesskey="c" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="ellipse" oncommand="m$.makeSVGEdit('inserthtml','&ellipse.sample;');" accesskey="e" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="rectangle" oncommand="m$.makeSVGEdit('inserthtml','&rect.sample;');" accesskey="r" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="polygon" oncommand="m$.makeSVGEdit('inserthtml','&polygon.sample;');" accesskey="p" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="line" oncommand="m$.makeSVGEdit('inserthtml','&line.sample;');" accesskey="l" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="text" oncommand="m$.makeSVGEdit('inserthtml','&text.sample;');" accesskey="t" minwidth="75" minheight="20">
+	  </menuitem>
+	  <menuitem label="sketch" oncommand="m$.makeSVGEdit('inserthtml','&pencil.sample;');" accesskey="s" minwidth="75" minheight="20">
+	  </menuitem>
+	</menupopup>
+      </menu>
+      <menuitem label="Video" oncommand="m$.insertVideo();" accesskey="v"/>
+      <menuitem label="Audio" oncommand="m$.insertAudio();" accesskey="v"/>
+    </menupopup>
+  </menu>
+</overlay>

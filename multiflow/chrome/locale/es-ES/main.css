@@ -1,0 +1,9 @@
+#xlabel { font-weight: bold; }
+
+prefwindow { opacity: 1.0; }
+window { opacity: 1.0; }
+.title { font-size: 20pt; color: blue; }
+.input-box { padding: 0; vertical-align:middle; }
+#parahtml { background-color: silver;  color: green; font-size: 14pt; padding-left: 15px; resize: both; }
+
+

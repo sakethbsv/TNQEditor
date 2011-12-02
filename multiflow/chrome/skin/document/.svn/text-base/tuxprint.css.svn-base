@@ -1,0 +1,57 @@
+div.article { 
+    margin: 0; padding: 0; max-width: 190mm;
+    font-size: 10pt; line-height: 12pt;
+    font-family: serif;
+}
+div.body_, div.back { 
+    -moz-column-count: 2; -moz-column-gap: 5mm;
+    column-count: 2; column-gap: 5mm;
+}
+
+p.ArticleTitle, p.articletitle { display: block; font-size: 16pt; font-weight: bold; font-family:sans-serif; }
+p.SectionA, p.AbstractTitle, p.BibTitle, p.AckTitle, p.sectiona, p.abstractitle, p.bibtitle, p.acktitle  { font-size: 12pt; font-weight: bold; font-family: sans-serif;  text-align: left; break-after: avoid; }
+p.SectionB, p.sectionb { font-size: 11pt;  font-weight: bold; font-style: italic; font-family: sans-serif; text-align: left;  break-after: avoid;}
+p.SectionC, p.sectionc { font-size: 11pt; font-family: sans-serif; font-style: italic; text-align: left;  break-after: avoid;}
+p.Authors, p.authors { font-size: 11pt;  }
+p.Affiliation, p.affiliation { font-size: 11pt; font-style: italic;  }
+ { font-size: 11pt; font-weight: bold; }
+p.Keywords, p.keywords { font-size: 10pt; font-style: italic; }
+p.Paragraph, p.AbstractPara, p.ParaWithoutIndent, p.paragraph, p.abstractpara, p.parawithoutindent {
+    font-family: serif;
+    font-size: 10pt; line-height: 12pt;
+    text-align: justify; hyphens: auto;
+    word-spacing: -0.5px;
+}
+
+p.Paragraph+p.Paragraph, p.paragraph+p.paragraph {
+    text-indent: 1em;
+}
+
+p.BibItem, p.bibitem { 
+    font-size: 9pt; line-height: 11pt;
+    padding-left: 1.5em; text-indent: -1.5em;
+    text-align: justify; 
+    word-spacing: -0.5px;
+}
+
+p.FigCaption, p.TableCaption, p.figcaption, p.tablecaption { font-size: 10pt; line-height: 12pt; }
+
+img { page-break-before: auto; }
+div.TextBox { border: solid black; }
+p.big { font-size: 24pt;  }
+p. big>math { font-size: 24pt;  }
+embed { vertical-align: middle; }
+p.DisplayMath, p.displaymath { padding-top: 10pt; padding-bottom: 6pt; page-break-before: auto; }
+p.Acknowledgements, p.acknowledgements { font-size:10pt; line-height: 12pt; }
+
+eqno { float: right; padding-top: 14pt; }
+
+td, th {
+    font-size: 10pt; line-height: 12pt;
+}
+
+th {
+    font-family: sans-serif;
+}
+
+br { display: none; }
