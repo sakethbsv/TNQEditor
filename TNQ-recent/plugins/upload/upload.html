@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<!-- removed for now, causes problems in Firefox: manifest="svg-editor.manifest" -->
+<head>
+
+
+
+	<title>File uploader</title>
+	
+</head>
+<body>
+	
+    <form action="upload_filecomb.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file" />
+<br />
+<input type="submit" name="submit" onclick="inform()" value="Submit" />
+</form>
+
+<script>
+function inform(){
+alert("1");
+var fp = document.getElementById(file);
+var f = fp.replace(/[.][a-z]+$/,"");
+alert(f);
+	//Switch for each filetype depending on file extension///
+	var ext = fp.replace(/^.*[.]([a-z]+)$/i,"$1").toLowerCase();
+	alert(ext);
+	switch(ext) {
+	case "docx":
+	case "odt":
+	case "doc":
+	case "rtf":
+	    args = ["--to=html",fp];
+	cmm$.runShellCommand(abiwordPath,args);
+	f = f + ".html";
+	break;
+	}
+}
+//alert("1");
+//$("#tool_source").click(function () {
+//$("#tool_source_cancel").click(function(){alert($("#svg_source_textarea").html())});
+//$("#tool_source_cancel").click(function(){alert($("#svg_source_container").html())});
+//svgEditor.html();
+//alert($("#svg_source_textarea").html());
+var CKEDITOR = window.parent.CKEDITOR;
+
+var okListener = function(ev) {
+	//alert(source);
+	function ahah(url, target) {
+  document.getElementById(target).innerHTML = ' Fetching data...';
+  if (window.XMLHttpRequest) {
+    req = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    req = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (req != undefined) {
+    req.onreadystatechange = function() {ahahDone(url, target);};
+    req.open("GET", url, true);
+    req.send("");
+  }
+}  
+
+function ahahDone(url, target) {
+  if (req.readyState == 4) { // only if req is "loaded"
+    if (req.status == 200) { // only if "OK"
+      document.getElementById(target).innerHTML = req.responseText;
+    } else {
+      document.getElementById(target).innerHTML=" AHAH Error:\n"+ req.status + "\n" +req.statusText;
+    }
+  }
+}
+
+function load(name, div) {
+	ahah(name,div);
+	return false;
+}
+load('upload/tenSigmas.html','editor1');
+//document. getElementById("editor1"). innerHTML = "from page";
+document.getElementById("svg_editor").style.display.value = "none";
+	//var crap = svgCanvas.svgCanvasToString();
+	//alert(crap)   
+	//this._.editor.insertHtml(svgCanvas.svgCanvasToString());
+  //this._.editor.insertHtml("" +crap+ "");
+  //this._.editor.insertElement(crap);
+ //this._.editor.insertText(crap);
+   CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
+};
+
+CKEDITOR.dialog.getCurrent().on("ok", okListener);
+</script>
+<!--
+<script type="text/javascript">
+function ahah(url, target) {
+  document.getElementById(target).innerHTML = ' Fetching data...';
+  if (window.XMLHttpRequest) {
+    req = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    req = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (req != undefined) {
+    req.onreadystatechange = function() {ahahDone(url, target);};
+    req.open("GET", url, true);
+    req.send("");
+  }
+}  
+
+function ahahDone(url, target) {
+  if (req.readyState == 4) { // only if req is "loaded"
+    if (req.status == 200) { // only if "OK"
+      document.getElementById(target).innerHTML = req.responseText;
+    } else {
+      document.getElementById(target).innerHTML=" AHAH Error:\n"+ req.status + "\n" +req.statusText;
+    }
+  }
+}
+
+function load(name, div) {
+	ahah(name,div);
+	return false;
+}
+load('upload/tenSigmas.html','editor1');
+//document. getElementById("editor1"). innerHTML = "from page";
+document.getElementById("svg_editor").style.display.value = "none";
+</script>-->
+</body>
+</html>

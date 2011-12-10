@@ -1,0 +1,264 @@
+
+    this.any2html = function(fp) {
+	var abiwordPath = m$.getPref("abiwordPath");
+	var args;
+	var f = fp.replace(/[.][a-z]+$/,"");
+	//Switch for each filetype depending on file extension///
+	var ext = fp.replace(/^.*[.]([a-z]+)$/i,"$1").toLowerCase();
+	switch(ext) {
+	case "docx":
+	case "odt":
+	case "doc":
+	case "rtf":
+	    args = ["--to=html",fp];
+	cmm$.runShellCommand(abiwordPath,args);
+	f = f + ".html";
+	break;
+
+	case "tex":
+	    args = ["--destination=" + f + ".xml", fp];
+	    cmm$.runLaTeXML(args);
+	    args = ["--destination=" + f + ".xhtml", f + ".xml"];
+            cmd$.runLaTeXMLpost(args);
+	    f = f + ".xhtml";
+	    break;
+	
+	default:
+	    alert("Unknown file extension...opening as HTML");
+	    f = fp;
+	    break;
+	}
+   
+	return f;
+
+    }
+
+
+
+
+
+
+
+
+
+ this.insertGraphic = function() {
+	var nsIFilePicker = Components.interfaces.nsIFilePicker;
+	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	fp.init(window, "Insert a Graphic", nsIFilePicker.modeOpen);
+	fp.appendFilters(nsIFilePicker.filterImages);
+	fp.appendFilter("Vector Graphic", "*.svg");
+	var res = fp.show();
+	if (res == nsIFilePicker.returnOK){
+	    var thefile = fp.file;
+	    if (thefile.exists()) {
+		if(thefile.path.match(/[.]svg$/i)) {
+		    m$.makeEdit("inserthtml","<embed src='file://" + thefile.path + "'>");
+		}
+		else {
+		    m$.makeEdit("inserthtml","<img src='file://" + thefile.path + "'>");
+		}
+	    }
+	}
+    }
+
+    this.insertVideo = function() {
+	var nsIFilePicker = Components.interfaces.nsIFilePicker;
+	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	fp.init(window, "Insert a Video", nsIFilePicker.modeOpen);
+	fp.appendFilter("Ogg", "*.ogg");
+	fp.appendFilter("MP4", "*.mp4");
+	var res = fp.show();
+	if (res == nsIFilePicker.returnOK){
+	    var thefile = fp.file;
+	    if (thefile.exists()) {
+		m$.makeEdit("inserthtml","<video src='file://" + thefile.path + "' controls='true' autoplay='true'>Doesn't support <code>video</code> tag!!!</video>");
+	    }
+	}
+
+    }
+
+    this.insertAudio = function() {
+	var nsIFilePicker = Components.interfaces.nsIFilePicker;
+	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	fp.init(window, "Insert a Video", nsIFilePicker.modeOpen);
+	fp.appendFilter("Ogg", "*.ogg");
+	fp.appendFilter("Wave", "*.wav");
+	var res = fp.show();
+	if (res == nsIFilePicker.returnOK){
+	    var thefile = fp.file;
+	    if (thefile.exists()) {
+		m$.makeEdit("inserthtml","<audio src='file://" + thefile.path + "' controls='true' autoplay='true'>Doesn't support <code>audio</code> tag!!!</audio>");
+
+	    }
+	}
+    }
+
+    this.openFile = function() {
+	m$.initEditor();
+	var URL = m$.Editor().src;
+	if(URL == null || URL.spec != "chrome://multiflow/locale/MuLTiFlow.html") {
+	    if(confirm("Save the current file?")) {	m$.saveCurrentFile(); }
+	}
+	var recentFile = m$.getPref("recentFile");
+	var thefile = FileIO.open(recentFile);
+	if(confirm("Do you want to open the recent file? (" +  recentFile + ")")) {	    
+	}
+	else {
+	    var nsIFilePicker = Components.interfaces.nsIFilePicker;
+	    var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	    if(fp.addToRecentDocs) { 
+		fp.addToRecentDocs = true; 
+	    }
+	    else {
+		if(recentFile != "") {
+		    var recentDir = recentFile.replace(/[a-zA-Z0-9.]+$/,"");
+		    var dir = FileIO.open(recentDir);
+		    if(dir) {
+			fp.displayDirectory = dir;
+		    }
+		}
+	    }
+	    fp.init(window, "Open a File", nsIFilePicker.modeOpen);
+	    fp.appendFilters(nsIFilePicker.filterHTML);
+	    fp.appendFilter("MS Word 2007 XML Package", "*.docx");
+	    fp.appendFilter("Open Office XML Package", "*.odt");
+	    //fp.appendFilter("3B2 Document", "*.3d");
+	    //fp.appendFilter("LaTeX Document", "*.tex");
+	    fp.appendFilter("eBook package", "*.epub");
+	    fp.appendFilter("HTML package", "*.hpub");
+	    fp.appendFilter("All Files", "*");
+	    var res = fp.show();
+	    if (res == nsIFilePicker.returnOK){
+		thefile = fp.file;
+	    }
+	    else {
+		thefile = null;
+	    }
+	}
+	if (thefile && thefile.exists()) {
+	    var theFilePath = thefile.path;
+	    m$.setPref("recentFile",theFilePath);
+	    var str  = "Sorry couldn't import, may be try saving it as HTML and opening the file in this editor!!";
+	    if(theFilePath.match(/[.](htm|html|xhtml|xml|txt)$/i)) {
+		m$.UrlBox().value = theFilePath;
+		str  = FileIO.read(thefile,"UTF-8");
+	    }
+	    else if(theFilePath.match(/[.](docx|odt|epub|hpub)$/i)) {
+		str = m$.getHtmlFromPackage(theFilePath);
+	    }
+	    else {
+		alert("This file format/extension is not supported. Please convert to HTML and load the HTML document or try cutting and pasting into a blank document from the application that opens the document");
+	    }
+	    var bstr = str.replace(/^([^a]|a)*<body[^<>]*>/im,"");
+	    bstr = m$.normalizeText(bstr);
+	    $(m$.Editor().contentDocument.body).html(bstr);
+	    m$.LaTeXMLFilter();
+	    m$.HTMLFilter();
+	    var ios = Components.classes["@mozilla.org/network/io-service;1"]
+	    .getService(Components.interfaces.nsIIOService);  
+	    m$.Editor().src = ios.newFileURI(thefile);
+	    m$.makeEditable();
+	    var doc = m$.Editor().contentDocument;
+	    var title = "M5 document";
+	    var author = "Nicolas Bourbaki";
+	    if(str.match(/<title(?:\s[^<>]*)?>([^<>]*)<\/title>/)) {
+		title = str.match(/<title(?:\s[^<>]*)?>([^<>]*)<\/title>/)[0].replace(/<[^<>]+>/g,"");
+	    }
+	    if(str.match(/<meta(?:\s[^<>]*)?name=[\'\"]?author[^a-z][^<>]*>/i)) {
+		author = str.match(/<meta(?:\s[^<>]*)?name=['"]?author[^a-z][^<>]*>/i)[0].replace(/^.*content=["']?([^<>\"\']+).*>/gi,"$1");
+	    }
+	    $(doc).find("title").html(title);
+	    $(doc).find("meta[name='author']").attr('content',author);
+	    m$.updateDocumentMetaDataToPrefs(title,author);
+	    m$.markAllSentenceBreaks();
+	    if(m$.getGeckoVersion() < 2) { m$.convertMath(doc); }
+	    m$.optionCodeWindow();
+	    m$.refreshEditor();
+	}
+	else {
+	    alert("Not able to access the file: " + theFilePath);
+	}
+      
+    }
+
+   
+
+
+
+
+
+
+
+var cmd$ = new shellCmd();
+function shellCmd() {
+    function runShellCommand(cmd,args) {
+	var file = Components.classes["@mozilla.org/file/local;1"]
+	    .createInstance(Components.interfaces.nsILocalFile);
+	file.initWithPath(cmd);
+	if(file.exists()) {
+	    var process = Components.classes["@mozilla.org/process/util;1"]
+		.createInstance(Components.interfaces.nsIProcess);
+	    process.init(file);
+	    process.run(true, args, args.length);
+	}
+	else {
+	    alert(cmd + " doesn't exist; please update the correct path to the binary in the Settings menu");
+	}
+    }
+
+    function runPerl(args) {
+	var perlPath = m$.getMuLTiFlowPref("perlPath");
+	cmd$.runShellCommand(perlPath,args);
+    }
+
+    function runAbiword(args) {
+	var abiwordPath = m$.getMuLTiFlowPref("abiwordPath");
+	runShellCommand(abiwordPath,args);
+    }
+
+    function runLaTeXML(args) {
+	var latexmlPath = m$.getMuLTiFlowPref("latexmlPath");
+	runShellCommand(latexmlPath,args);
+    }
+
+    function runLaTeXMLpost(args) {
+	var latexmlpostPath = m$.getMuLTiFlowPref("latexmlPath") + "post";
+	runShellCommand(latexmlpostPath,args);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+this.updateDocumentStyles = function() {
+	var styleTheme = m$.getPref("styleTheme");
+	var jdoc = $(m$.Editor().contentDocument);
+	var chromePath = m$.getChromePath();
+	var styleSheet = "file://" + chromePath + "/skin/document/tux-" + styleTheme + ".css";
+	jdoc.find("#webcss").attr("href",styleSheet);
+	//var cols = m$.getPref("columns");
+	//m$.makeColumns(cols);
+	m$.refreshEditor();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
